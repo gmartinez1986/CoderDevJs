@@ -1,0 +1,20 @@
+.titles{
+    
+    &--subtitlesH2{
+        font-size: 2.1rem;
+        color: white;
+        background-color: #044179;
+        text-align: center;
+        padding: 1rem 0;
+        margin-bottom: 0;
+        text-shadow: 2px 2px 1px #333;
+    }
+
+    &--subtitlesH3{
+        font-size: 1.55rem;
+        color: gold;
+        text-align: center;
+        letter-spacing: 0.2em;
+        padding: 1rem 0;
+    }
+}

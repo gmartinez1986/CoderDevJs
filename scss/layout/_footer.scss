@@ -1,0 +1,41 @@
+
+.footer{
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: #04305f;
+    border-top: thin solid white;
+     
+    &--linkRedes{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+
+    &--linkRedes>a{
+        text-decoration: none; 
+        color: white;
+        padding: .3rem;
+        margin-bottom: 1%;
+        margin-right: 1%;
+        font-size: 1.3rem;
+        transition: transform 3s;
+    }
+
+    &--linkRedes>a:hover {
+        transform: scale(1.5);
+        color: white;
+    }
+    
+    &--text{
+        color: white;
+        font-size: 1.1rem;
+        margin-top: 1%;
+    }
+
+    &--text:hover{
+        color: #337ab7;
+    }
+}

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="agencia,viajes,vacaciones,aereo,bus,argentina,mexico,peru,brasil">
+    <meta name="description" content="Destinos nacionales e internacionales. Paquetes turísticos. Vacaciones en Argentina, México, Perú, Brasil">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Archivo:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="./styles/font-awesome.css" rel="stylesheet">
+    <link href="./styles/css/bootstrap.css" rel="stylesheet">
+    <link rel="icon" href="./assets/img/turismo-min.png">
+    <title>Agencia de Turismo</title>
+</head>
+
+<body>
+    <!--Sección Cabecera-->
+    <header class="header">
+        <nav class="navbar navbar-expand-md navbar-light header__containerHeader">
+            <div class="container-fluid justify-content-end">
+
+                <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="header__containerHeader__logoTitle">
+                    <a href="#">
+                        <img src="./assets/img/turismo-min.png" alt="Logo"
+                            class="header__containerHeader__logoTitle--logo">
+                    </a>
+                    <h1 class="header__containerHeader--title">Agencia de Turismo</h1>
+                </div>
+
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+
+                    <ul class="nav navbar-nav menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span class="material-icons home">home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/packages/argentina.html"><b>ARGENTINA</b></a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/destinations.html"><b>DESTINOS</b></a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/offers.html"><b>OFERTAS</b></a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/contact.html"><span class="material-icons email">email</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--Sección Principal-->
+    <main class="main">
+
+        <!--Sección Ofertas-->
+        <section class="main--grid">
+
+            <div class="container offers" id="divArgentina">
+                <h2 class="titles--subtitlesH2">Destacados</h2>
+                <div class="row">
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="offers__offerContainer">
+                            <h5 class="offers__offerContainer--title">Findes Largos y Feriados</h5>
+                            <div>
+                                <img src="./assets/img/viajes-vacaciones-feriado-finde-largo.jpg"
+                                    alt="Promocion Turismo" class="offers__offerContainer--imgPromo">
+                                <div>
+                                    <p class="offers__offerContainer--text">Viajes para Feriados y Findes Largos. No te
+                                        lo pierdas!</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <p class="offers__offerContainer--price">$ 99.999</p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#myModal"
+                                        class="btn btn-invert btn-md">
+                                        <span>Quiero viajar!</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="offers__offerContainer">
+                            <h5 class="offers__offerContainer--title">Noroeste Argentino</h5>
+                            <div>
+                                <img src="./assets/img/noa-montana-7-colores.jpg" alt="Promocion Turismo"
+                                    class="offers__offerContainer--imgPromo">
+                                <p class="offers__offerContainer--text">Viví tradición y explora los bellos paisajes en
+                                    el Noroeste.</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <p class="offers__offerContainer--price">$ 99.999</p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#myModal"
+                                        class="btn btn-invert btn-md">
+                                        <span>Quiero viajar!</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="offers__offerContainer">
+                            <h5 class="offers__offerContainer--title">Merlo y Carlos Paz</h5>
+                            <div>
+                                <img src="./assets/img/viajes-merlo-san-luis-sierras.jpg"" alt=" Promocion Turismo"
+                                    class="offers__offerContainer--imgPromo">
+                                <p class="offers__offerContainer--text">Un bello y tranquilo recorrido por Neuquén. Para
+                                    disfrutar en familia.</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <p class="offers__offerContainer--price">$ 99.999</p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#myModal"
+                                        class="btn btn-invert btn-md">
+                                        <span>Quiero viajar!</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="offers__offerContainer">
+                            <h5 class="offers__offerContainer--title">San Juan y La Rioja</h5>
+                            <div>
+                                <img src="./assets/img/campo-piedra-pomez-excursiones.jpg" alt="Promocion Turismo"
+                                    class="offers__offerContainer--imgPromo">
+                                <p class="offers__offerContainer--text">Viajes que recorren paisajes enigmáticos y
+                                    antiguos. Descubrilos!</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <p class="offers__offerContainer--price">$ 99.999</p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#myModal"
+                                        class="btn btn-invert btn-md">
+                                        <span>Quiero viajar!</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="offers__offerContainer">
+                            <h5 class="offers__offerContainer--title">Bariloche</h5>
+                            <div>
+                                <img src="./assets/img/viajes-bariloche-desde-rosario.jpg" alt="Promocion Turismo"
+                                    class="offers__offerContainer--imgPromo">
+                                <p class="offers__offerContainer--text">Viajes a Bariloche, San Martín de los Andes y
+                                    Villa la Angostura.</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <p class="offers__offerContainer--price">$ 99.999</p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#myModal"
+                                        class="btn btn-invert btn-md">
+                                        <span>Quiero viajar!</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="offers__offerContainer">
+                            <h5 class="offers__offerContainer--title">Puerto Madryn</h5>
+                            <div>
+                                <img src="./assets/img/madryn-navegacion-ballenas.jpg" alt="Promocion Turismo"
+                                    class="offers__offerContainer--imgPromo">
+                                <p class="offers__offerContainer--text">Ciudad de Ballenas, Pingüinos, playas y mucha
+                                    fauna marina!</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <p class="offers__offerContainer--price">$ 99.999</p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#myModal"
+                                        class="btn btn-invert btn-md">
+                                        <span>Quiero viajar!</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="offers__offerContainer">
+                            <h5 class="offers__offerContainer--title">El Calafate + Ushuaia</h5>
+                            <div>
+                                <img src="./assets/img/ushuaia-viajes-excursiones-faro.jpg" alt="Promocion Turismo"
+                                    class="offers__offerContainer--imgPromo">
+                                <p class="offers__offerContainer--text">Volá en este hermoso viaje a Ushuaia y El
+                                    Calafate. Descubri sus maravillas!</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <p class="offers__offerContainer--price">$ 99.999</p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#myModal"
+                                        class="btn btn-invert btn-md">
+                                        <span>Quiero viajar!</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="offers__offerContainer">
+                            <h5 class="offers__offerContainer--title">Costa Atlántica</h5>
+                            <div>
+                                <img src="./assets/img/costa-atlantica-vacaciones.jpg" alt="Promocion Turismo"
+                                    class="offers__offerContainer--imgPromo">
+                                <p class="offers__offerContainer--text">Viajá a la Costa Atlántica: Pinamar, San
+                                    Bernardo y Mar de Ajó.</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <p class="offers__offerContainer--price">$ 99.999</p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#myModal"
+                                        class="btn btn-invert btn-md">
+                                        <span>Quiero viajar!</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="offers__offerContainer">
+                            <h5 class="offers__offerContainer--title">Noroeste en Avión</h5>
+                            <div>
+                                <img src="./assets/img/viajes-noroeste-aereo-desde-rosario.jpg" alt="Promocion Turismo"
+                                    class="offers__offerContainer--imgPromo">
+                                <p class="offers__offerContainer--text">Viajes en avión al Noroeste Argentino. No te lo
+                                    pierdas!</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <p class="offers__offerContainer--price">$ 99.999</p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#myModal"
+                                        class="btn btn-invert btn-md">
+                                        <span>Quiero viajar!</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--Sección Pie de Pagina-->
+    <footer class="footer">
+        <div>
+            <a href="" class="footer--text"><i class="fas fa-envelope"></i>agencia@gmail.com</a>
+        </div>
+        <div>
+            <a href="" class="footer--text"><i class="fas fa-phone-alt"></i>123456789</a>
+        </div>
+        <div class="footer--linkRedes">
+            <a href=""><i class="fab fa-whatsapp"></i></a>
+            <a href=""><i class="fab fa-facebook"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-youtube"></i></a>
+            <a href=""><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title col-11 text-center">Consultá un Asesor</h5>
+                    <button type="button text-right" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="modal--panel modal--panel-default">
+                        <div class="modal--panel-heading">
+                            <h5 class="modal--panel-heading-title col-11 text-center">
+                                <i class="fa fa-users"></i>
+                                Consultanos
+                            </h5>
+                        </div>
+
+                        <div class="modal__panel-body">
+
+                            <div class="row modal__panel-body--row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6 text-center">
+                                    <h5>Consultas WhatsApp</h5> 
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6 text-center">
+                                    <h5>Consultas Facebook</h5> 
+                                </div>
+                            </div>
+
+                            <div class="row modal__panel-body--row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6 text-center">
+                                    <a class="page-scroll btn btn-invert btn-sm" href="https://wa.me/123456789" target="_blank">Contactar en WhatsApp</a>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6 text-center">
+                                    <a class="page-scroll btn btn-invert btn-sm" href="http://m.me/agencia" target="_blank">Contactar en Facebook</a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6 text-center">
+                                    <h5>Consultas en Instagram</h5> 
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6 text-center">
+                                    <h5>Consultas por Email</h5> 
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6 text-center">
+                                    <a class="page-scroll btn btn-invert btn-sm" href="https://www.instagram.com/agencia/" target="_blank">Contactar en Instagram</a>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6 text-center">
+                                    <a class="page-scroll btn btn-invert btn-sm" href="mailto:agencia@gmail.com" target="_blank">Contactar por Email</a>
+                                </div>
+                            </div>
+             
+                        </div>
+
+                        <div class="modal--panel-heading">
+                            <h5 class="modal--panel-heading-title col-11 text-center">
+                                <i class="fa fa-users"></i>
+                                Nuestra Oficina
+                            </h5>
+                        </div>
+
+                        <div class="modal__panel-body">
+                            <div class="row modal__panel-body--row">
+                                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 col-11 text-center">
+                                    <h5><b>Horarios de Atención</b></h5>
+                                </div>
+                                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 col-11 text-center">
+                                    <h6>Lunes a Viernes de 9 a 18hs</h6>
+                                </div>
+                            </div>
+
+                            <div class="row modal__panel-body--row">
+                                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 col-11 text-center">
+                                    <i class="fa fa-phone"></i>
+                                    <span><a class="modal__panel-body--phone" href="tel:123456789">123456789</a></span>
+                                </div>
+                            </div>
+                            
+                            <div class="row modal__panel-body--row">
+                                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 col-11 text-center">
+                                    <h5><b>Agencia de Turismo</b></h5>
+                                </div>
+                                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 col-11 text-center">
+                                    <h6>Calle 1234 Piso 1A CABA</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,513 @@
+@charset "UTF-8";
+.navbar-light .navbar-nav .nav-link {
+  color: white !important; }
+
+.header {
+  text-align: center;
+  border-bottom: thin solid white; }
+  .header__containerHeader {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    background: #04305f; }
+    .header__containerHeader__logoTitle {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      flex: 0 1 50%; }
+      .header__containerHeader__logoTitle--logo {
+        width: 8rem;
+        height: 6rem;
+        border-radius: 1rem;
+        transition: transform 2s;
+        cursor: pointer; }
+        .header__containerHeader__logoTitle--logo:hover {
+          transform: scale(1.15); }
+    @media screen and (max-width: 768px) {
+      .header__containerHeader__logoTitle {
+        display: none; } }
+    .header__containerHeader--title {
+      color: #fff;
+      font-family: "Akaya Kanadaka", cursive;
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 1px #333; }
+  .header .custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
+  .header .custom-toggler.navbar-toggler {
+    border-color: white; }
+  .header .nav-link:hover {
+    color: #337ab7 !important; }
+
+.sidebar {
+  background: cyan;
+  background: linear-gradient(90deg, cyan 0%, white 86%); }
+  .sidebar--subtitles {
+    font-size: 1.3rem;
+    color: gray;
+    text-align: center;
+    letter-spacing: 0.2em;
+    padding: 1rem 0; }
+  .sidebar__options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+    color: grey; }
+    .sidebar__options--option {
+      margin-bottom: 1rem;
+      cursor: pointer; }
+    .sidebar__options--option:hover {
+      border-bottom: .3rem solid gray; }
+  @media screen and (max-width: 768px) {
+    .sidebar__options {
+      flex-direction: row;
+      justify-content: space-around; } }
+
+.main--grid {
+  display: grid;
+  background-color: #044179;
+  padding-bottom: 2rem; }
+
+@media screen and (max-width: 426px) {
+  .main--grid {
+    display: grid;
+    grid-template-columns: none; } }
+
+@media screen and (max-width: 768px) {
+  .main--grid {
+    display: grid;
+    grid-template-columns: none; } }
+
+.footer {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: #04305f;
+  border-top: thin solid white; }
+  .footer--linkRedes {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start; }
+  .footer--linkRedes > a {
+    text-decoration: none;
+    color: white;
+    padding: .3rem;
+    margin-bottom: 1%;
+    margin-right: 1%;
+    font-size: 1.3rem;
+    transition: transform 3s; }
+  .footer--linkRedes > a:hover {
+    transform: scale(1.5);
+    color: white; }
+  .footer--text {
+    color: white;
+    font-size: 1.1rem;
+    margin-top: 1%; }
+  .footer--text:hover {
+    color: #337ab7; }
+
+.titles--subtitlesH2 {
+  font-size: 2.1rem;
+  color: white;
+  background-color: #044179;
+  text-align: center;
+  padding: 1rem 0;
+  margin-bottom: 0;
+  text-shadow: 2px 2px 1px #333; }
+
+.titles--subtitlesH3 {
+  font-size: 1.55rem;
+  color: gold;
+  text-align: center;
+  letter-spacing: 0.2em;
+  padding: 1rem 0; }
+
+.modal--panel {
+  overflow: hidden; }
+
+.modal--panel-heading {
+  background: #333;
+  color: #fff;
+  height: 2rem;
+  padding: 1%;
+  margin-top: 0.3rem; }
+
+.modal__panel-body {
+  background: #07549c;
+  color: #eee;
+  padding: 2%;
+  margin-top: 0.1rem; }
+  .modal__panel-body--row {
+    padding: 0.5rem; }
+  .modal__panel-body--phone {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem; }
+  .modal__panel-body--phone:hover {
+    color: #337ab7; }
+
+.modal .btn {
+  border-radius: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out; }
+
+.modal .btn-invert {
+  border: 1px solid #ff9912;
+  outline: 0;
+  color: #04305f;
+  background-color: #ff9912; }
+
+.modal .btn-invert:hover,
+.modal .btn-invert:focus {
+  border: 1px solid #ff9912;
+  color: #ff9912;
+  background-color: transparent; }
+
+.offers {
+  text-align: center;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-content: flex-start;
+  color: gold;
+  border: 1px solid transparent; }
+  .offers__offerContainer {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%;
+    margin: 3%;
+    padding: 0 6px;
+    color: white;
+    border: thin solid gold;
+    transition: transform 2s;
+    padding-bottom: 1rem; }
+    .offers__offerContainer--imgPromo {
+      width: 90%;
+      height: 11rem; }
+    .offers__offerContainer--title {
+      margin: 1rem; }
+    .offers__offerContainer--text {
+      font-size: 1rem;
+      text-align: center;
+      padding: 1rem 0; }
+    .offers__offerContainer--price {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      color: #ff9912; }
+    .offers__offerContainer .btn {
+      border-radius: 0;
+      font-family: 'Lato', sans-serif;
+      font-weight: 900;
+      -webkit-transition: all .3s ease-in-out;
+      -moz-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out; }
+    .offers__offerContainer .btn-invert {
+      border: 1px solid #ff9912;
+      outline: 0;
+      color: #04305f;
+      background-color: #ff9912; }
+    .offers__offerContainer .btn-invert:hover,
+    .offers__offerContainer .btn-invert:focus {
+      border: 1px solid #ff9912;
+      color: #ff9912;
+      background-color: transparent; }
+  .offers__offerContainer:hover {
+    transition: transform 2s;
+    transform: scale(1.03);
+    background-color: #04305f; }
+
+.destinations {
+  /*   margin-top: 1rem;
+    display: flex;
+    text-align: center;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-content: flex-start;*/
+  margin-top: 2rem;
+  color: #080849;
+  border: 1px solid transparent; }
+  .destinations--img {
+    width: 100%; }
+  .destinations figure.effect-chico img {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  .destinations figure.effect-chico:hover img {
+    opacity: 0.5;
+    -webkit-transform: scale(1.12);
+    transform: scale(1.12); }
+  .destinations figure.effect-chico figcaption {
+    padding: 3em; }
+  .destinations figure.effect-chico figcaption::before {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    border: 1px solid #fff;
+    content: '';
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
+  .destinations figure.effect-chico figcaption::before,
+  .destinations figure.effect-chico p {
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s; }
+  .destinations figure.effect-chico p {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5); }
+  .destinations figure.effect-chico:hover figcaption::before,
+  .destinations figure.effect-chico:hover p {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  .destinations figure.effect-chico h3 {
+    padding: 10% 0 0 0; }
+  .destinations figure {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    background: #04305f;
+    text-align: center;
+    cursor: pointer;
+    width: 100%; }
+  .destinations figure img {
+    position: relative;
+    display: block;
+    opacity: 0.8; }
+  .destinations figure figcaption {
+    padding: 2em;
+    color: #fff;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
+  .destinations figure figcaption::before,
+  .destinations figure figcaption::after {
+    pointer-events: none; }
+  .destinations figure figcaption,
+  .destinations figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .destinations figure figcaption > a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0; }
+  .destinations figure h3 {
+    font-weight: 400; }
+  .destinations figure h3 span {
+    margin-right: 2px;
+    font-weight: 900; }
+
+.packages {
+  /* Contenedor general */
+  /* Cada elemento */
+  /* Títulos pestañas */
+  /* Contenido inicialmente oculto */
+  /* Hover: Desplegamos elemento */
+  /* Hover: Hacemos que el título no ocupe todo el ancho */
+  /* Hover: La diferencia hasta el 100% lo ocupará el contenido */ }
+  .packages .card {
+    margin: 3%; }
+  .packages--img {
+    width: 100%;
+    height: 250px; }
+  .packages--bariloche {
+    content: url("../assets/img/bariloche-min.jpg");
+    background-size: 100% 250px; }
+  .packages--rosario {
+    content: url("../assets/img/rosario-min.jpg");
+    background-size: 100% 250px; }
+  .packages--mendoza {
+    content: url("../assets/img/mendoza-min.jpg");
+    background-size: 100% 250px; }
+  .packages--caba {
+    content: url("../assets/img/caba-min.jpg");
+    background-size: 100% 250px; }
+  .packages--MarDelPlata {
+    content: url("../assets/img/MarDelPlata-min.jpg");
+    background-size: 100% 250px; }
+  .packages--CostaAtlantica {
+    content: url("../assets/img/CostaAtlantica-min.jpg");
+    background-size: 100% 250px; }
+  .packages--janeiro {
+    content: url("../assets/img/janeiro-min.jpg");
+    background-size: 100% 250px; }
+  .packages--buzios {
+    content: url("../assets/img/buzios-min.jpg");
+    background-size: 100% 250px; }
+  .packages--salvador-de-bahia {
+    content: url("../assets/img/salvador-de-bahia-min.jpg");
+    background-size: 100% 250px; }
+  .packages--natal-pipa {
+    content: url("../assets/img/natal-pipa-min.jpg");
+    background-size: 100% 250px; }
+  .packages--porto-galinhas {
+    content: url("../assets/img/porto-galinhas-min.jpg");
+    background-size: 100% 250px; }
+  .packages--camboriu {
+    content: url("../assets/img/camboriu-min.jpg");
+    background-size: 100% 250px; }
+  .packages--espana {
+    content: url("../assets/img/espana-min.jpg");
+    background-size: 100% 250px; }
+  .packages--barcelona-espana {
+    content: url("../assets/img/barcelona-espana-min.jpg");
+    background-size: 100% 250px; }
+  .packages--londres {
+    content: url("../assets/img/londres-min.jpg");
+    background-size: 100% 250px; }
+  .packages--viajes-viena-austria-centro {
+    content: url("../assets/img/viajes-viena-austria-centro-min.jpg");
+    background-size: 100% 250px; }
+  .packages--venecia {
+    content: url("../assets/img/venecia-min.jpg");
+    background-size: 100% 250px; }
+  .packages--roma-italia-coliseo {
+    content: url("../assets/img/roma-italia-coliseo-min.jpg");
+    background-size: 100% 250px; }
+  .packages--viajes-turquia {
+    content: url("../assets/img/viajes-turquia-min.jpg");
+    background-size: 100% 250px; }
+  .packages--santorini-grecia {
+    content: url("../assets/img/santorini-grecia-min.jpg");
+    background-size: 100% 250px; }
+  .packages--egipto-templo-philae {
+    content: url("../assets/img/egipto-templo-philae-min.jpg");
+    background-size: 100% 250px; }
+  .packages--jardin-persa-israel-haifa {
+    content: url("../assets/img/jardin-persa-israel-haifa-min.jpg");
+    background-size: 100% 250px; }
+  .packages--cuba {
+    content: url("../assets/img/cuba-min.jpg");
+    background-size: 100% 250px; }
+  .packages--dominicana-punta-cana {
+    content: url("../assets/img/dominicana-punta-cana-min.jpg");
+    background-size: 100% 250px; }
+  .packages--cartagena-colombia {
+    content: url("../assets/img/cartagena-colombia-min.jpg");
+    background-size: 100% 250px; }
+  .packages--playa-carmen-hoteles-all-inclusive {
+    content: url("../assets/img/playa-carmen-hoteles-all-inclusive-min.jpg");
+    background-size: 100% 250px; }
+  .packages--taxco-mexico-viajes {
+    content: url("../assets/img/taxco-mexico-viajes-min.jpg");
+    background-size: 100% 250px; }
+  .packages--habana-cuba {
+    content: url("../assets/img/habana-cuba-min.jpg");
+    background-size: 100% 250px; }
+  .packages .btn {
+    border-radius: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out; }
+  .packages .btn-default {
+    border: 1px solid #ff9912;
+    color: #ff9912;
+    background-color: transparent; }
+  .packages .btn-default:hover,
+  .packages .btn-default:focus {
+    border: 1px solid #ff9912;
+    outline: 0;
+    color: #04305f;
+    background-color: #ff9912; }
+  .packages ul.acordeon * {
+    margin: 0 auto;
+    padding: 0;
+    vertical-align: middle;
+    color: #fff;
+    -webkit-transition: all .6s ease-in-out;
+    -moz-transition: all .6s ease-in-out;
+    transition: all .6s ease-in-out;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  .packages ul.acordeon {
+    width: 100%;
+    /* Personalizar ancho total desplegado */
+    overflow: hidden;
+    margin: 0 auto 10px !important;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+    font-size: 0; }
+  .packages ul.acordeon li {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    /* IE7 */
+    width: 33%;
+    /* 90 : (nºelem+2) */
+    height: 30px;
+    padding: 0 !important;
+    text-align: center;
+    border-right: 1px solid transparent; }
+  .packages ul.acordeon li h4 {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    /* IE7 */
+    width: 100%;
+    height: 100%;
+    padding: 5px !important;
+    font-size: 18px;
+    text-align: center; }
+  .packages ul.acordeon li .contenido {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    /* IE7 */
+    width: 0%;
+    height: 100%;
+    padding: 3px 0;
+    overflow: hidden;
+    font-size: 14px; }
+  .packages ul.acordeon li:hover {
+    width: 33%;
+    /* aprox 3 x ancho ul.acordeon li */ }
+  .packages ul.acordeon li:hover h4 {
+    width: 40%;
+    /* Parte sobre el total que ocupara icono desplegado */
+    background: #333; }
+  .packages ul.acordeon li:hover h4 span {
+    color: #eee; }
+  .packages ul.acordeon li:hover .contenido {
+    width: 60%;
+    /* 100 - ancho ul.acordeon li:hover h4 */ }
+
+.contact {
+  text-align: center;
+  background-color: #044179; }
+  .contact__formulario {
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    padding: 2%;
+    font-size: 1rem;
+    color: white;
+    background-color: #07549c; }
+    .contact__formulario--inputText label {
+      display: inline-block;
+      margin: 0.65%; }
+
+.container--404 {
+  color: gray;
+  height: 100vh;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }

@@ -1,0 +1,56 @@
+.modal{
+
+    &--panel {
+        overflow:hidden;
+    }
+    
+    &--panel-heading {
+        background: #333;
+        color: #fff;
+        height: 2rem;
+        padding: 1%;
+        margin-top: 0.3rem;
+    }
+    
+    &__panel-body {
+        background: #07549c;
+        color: #eee;
+        padding: 2%;
+        margin-top: 0.1rem;
+        &--row{
+            padding: 0.5rem;
+        }
+        &--phone{
+            text-decoration: none;
+            color: white;
+            font-size: 1.1rem;
+        }
+
+        &--phone:hover{
+            color: #337ab7;
+        }
+    } 
+
+    .btn {
+        border-radius: 0;
+        font-family: 'Lato', sans-serif;
+        font-weight: 900;
+        -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+    }
+
+    .btn-invert {
+        border: 1px solid #ff9912;
+        outline: 0;
+        color: rgb(4,48,95);
+        background-color: #ff9912;
+    }
+    
+    .btn-invert:hover,
+    .btn-invert:focus {
+        border: 1px solid #ff9912;
+        color: #ff9912;
+        background-color: transparent;
+    }
+}

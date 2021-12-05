@@ -1,0 +1,127 @@
+.packages{
+
+  .card{
+    margin: 3%;
+  }
+
+  &--img{
+    width: 100%;
+    height: 250px;   
+  }
+
+  @each $city in bariloche, rosario, mendoza, caba, MarDelPlata, 
+                 CostaAtlantica, janeiro, buzios, salvador-de-bahia, 
+                 natal-pipa, porto-galinhas, camboriu, espana,
+                 barcelona-espana, londres, viajes-viena-austria-centro,
+                 venecia, roma-italia-coliseo, viajes-turquia,
+                 santorini-grecia, egipto-templo-philae, jardin-persa-israel-haifa,
+                 cuba, dominicana-punta-cana, cartagena-colombia,
+                 playa-carmen-hoteles-all-inclusive, taxco-mexico-viajes,
+                 habana-cuba {
+
+    &--#{$city} { 
+      content:url('../assets/img/#{$city}-min.jpg');
+      background-size: 100% 250px;
+    }
+  }
+
+  .btn {
+    border-radius: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+  }
+
+  .btn-default {
+    border: 1px solid #ff9912;
+    color: #ff9912;
+    background-color: transparent;
+  }
+
+  .btn-default:hover,
+  .btn-default:focus {
+      border: 1px solid #ff9912;
+      outline: 0;
+      color: rgb(4,48,95);
+      background-color: #ff9912;
+  }
+
+  ul.acordeon * {
+    margin: 0 auto;
+    padding: 0;
+    vertical-align: middle;
+    color: #fff;
+    -webkit-transition: all .6s ease-in-out;
+    -moz-transition: all .6s ease-in-out;
+    transition: all .6s ease-in-out;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; 
+  }
+
+  /* Contenedor general */
+  ul.acordeon {
+    width: 100%; /* Personalizar ancho total desplegado */
+    overflow: hidden;
+    margin: 0 auto 10px !important;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+    font-size: 0;
+  }
+
+  /* Cada elemento */
+  ul.acordeon li {
+    display: inline-block;
+    *display: inline; zoom: 1; /* IE7 */
+    width: 33%; /* 90 : (nºelem+2) */
+    height: 30px;
+    padding: 0 !important;
+    text-align: center;
+    border-right: 1px solid transparent;
+  }
+  
+  /* Títulos pestañas */
+  ul.acordeon li h4 {
+    display: inline-block;
+    *display: inline; zoom: 1; /* IE7 */
+    width: 100%;
+    height: 100%;
+    padding: 5px !important;
+    font-size: 18px;
+    text-align: center;
+  }
+  /* Contenido inicialmente oculto */
+  ul.acordeon li .contenido {
+    display: inline-block;
+    *display: inline; zoom: 1; /* IE7 */
+    width: 0%;
+    height: 100%;
+    padding: 3px 0;
+    overflow: hidden;
+    font-size: 14px;
+  }
+
+  /* Hover: Desplegamos elemento */
+  ul.acordeon li:hover {
+    width: 33%; /* aprox 3 x ancho ul.acordeon li */
+  }
+
+  /* Hover: Hacemos que el título no ocupe todo el ancho */
+  ul.acordeon li:hover h4 {
+    width: 40%; /* Parte sobre el total que ocupara icono desplegado */
+    background: #333;
+  }
+
+  ul.acordeon li:hover h4 span {
+    color: #eee;
+  }
+
+  /* Hover: La diferencia hasta el 100% lo ocupará el contenido */
+  ul.acordeon li:hover .contenido {
+    width: 60%; /* 100 - ancho ul.acordeon li:hover h4 */
+  }
+}
+

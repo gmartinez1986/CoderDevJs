@@ -1,0 +1,70 @@
+.offers{
+    text-align: center;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    color: gold;
+    border: 1px solid transparent;
+
+    &__offerContainer{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 30%;
+        margin: 3%;
+        padding: 0 6px;
+        color: white;
+        border: thin solid gold;
+        transition: transform 2s;
+        padding-bottom: 1rem;
+
+        &--imgPromo{
+            width: 90%;
+            height: 11rem;   
+        }
+
+        &--title{         
+            margin: 1rem;
+        }
+
+        &--text{         
+            font-size: 1rem;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        &--price{
+            margin-bottom:1rem;
+            font-size: 1.5rem;
+            color: #ff9912;
+        }
+
+        .btn {
+            border-radius: 0;
+            font-family: 'Lato', sans-serif;
+            font-weight: 900;
+            -webkit-transition: all .3s ease-in-out;
+            -moz-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+        }
+
+        .btn-invert {
+            border: 1px solid #ff9912;
+            outline: 0;
+            color: rgb(4,48,95);
+            background-color: #ff9912;
+        }
+        
+        .btn-invert:hover,
+        .btn-invert:focus {
+            border: 1px solid #ff9912;
+            color: #ff9912;
+            background-color: transparent;
+        }
+    }
+
+    &__offerContainer:hover{
+        transition: transform 2s;
+        transform: scale(1.03);
+        background-color: rgb(4,48,95);
+    }
+  }

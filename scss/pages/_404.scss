@@ -1,0 +1,14 @@
+
+.container {
+
+    &--404{
+        color: gray;
+        height: 100vh;
+        font-weight: bolder;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+}
