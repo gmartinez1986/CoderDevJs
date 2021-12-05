@@ -1,4 +1,12 @@
 
+class Contact {
+
+    constructor(name, surname, email) {
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+    }
+}
 
 //----------------------------------------------------------------------------------------------
 //Función que devuelve TRUE si el carácter evaluado es un numero, sino devuelve FALSE.
@@ -16,6 +24,10 @@ function onlyNumberKey(evt) {
 function SendContact() { 
 
     let name = document.getElementById('txtName').value;
+    let surname = document.getElementById('txtSurname').value;
+    let email = document.getElementById('txtEmail').value;
+
+    const contact1 = new Contact(name, surname, email);
 
     if(ValidateForm()){
 
@@ -25,5 +37,4 @@ function SendContact() {
 function ValidateForm() { 
 
     return true;
-
 }
