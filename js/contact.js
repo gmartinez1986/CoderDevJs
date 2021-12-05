@@ -1,4 +1,5 @@
 
+//Clase contacto.
 class Contact {
 
     constructor(name, surname, email, phone, newsLetter, comments) {
@@ -10,11 +11,30 @@ class Contact {
         this.comments = comments;
     }
 
+    //Valido la información ingresada.
     ValidateContact() { 
 
         if(this.name == ""){
-            alert("Debe ingresar un nombre");
+            alert("Debe ingresar un Nombre");
             document.getElementById('txtName').focus();
+            return false;
+        }
+
+        if(this.surname == ""){
+            alert("Debe ingresar un Apellido");
+            document.getElementById('txtSurname').focus();
+            return false;
+        }
+
+        if(this.email == ""){
+            alert("Debe ingresar un Email");
+            document.getElementById('txtEmail').focus();
+            return false;
+        }
+
+        if(this.phone == ""){
+            alert("Debe ingresar un Telefono");
+            document.getElementById('txtPhone').focus();
             return false;
         }
 
@@ -34,19 +54,23 @@ function onlyNumberKey(evt) {
     return true;
 }
 
-
+//Función para enviar info de contacto.
 function SendContact() { 
 
     let name = document.getElementById('txtName').value;
     let surname = document.getElementById('txtSurname').value;
     let email = document.getElementById('txtEmail').value;
     let phone = document.getElementById('txtPhone').value;
-    let newsLetter = document.getElementById('ckNewsLetter').value;
+    let newsLetter = document.getElementById('ckNewsLetter').checked;
     let comments = document.getElementById('txtComments').value;
 
+    //Objeto contacto.
     const contact1 = new Contact(name, surname, email, phone, newsLetter, comments);
 
+    //Validar info ingresada.
     if(contact1.ValidateContact()){
 
+        alert("Se envio la información");
+        document.getElementById('frmContact').reset();
     }
 }
