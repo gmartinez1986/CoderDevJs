@@ -66,17 +66,15 @@
                     </div>
 
                     <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
-                        <input type="text" class="form-control form-control-sm" id="nombre" placeholder="Nombre">
+                        <input type="text" class="form-control form-control-sm" id="txtName" placeholder="Nombre">
                     </div>
-
 
                     <div class="col-xl-1 col-lg-1 col-md-12 col-sm-12 col-xs-12">
                         <label class="col-xl-1" for="apellido">Apellido:</label>
                     </div>
 
                     <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
-                        <input type="text" class="form-control form-control-sm" id="Apellido"
-                            placeholder="Apellido">
+                        <input type="text" class="form-control form-control-sm" id="txtSurname" placeholder="Apellido">
                     </div>
 
                 </div>
@@ -88,7 +86,7 @@
                     </div>
 
                     <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
-                        <input type="email" class="form-control form-control-sm" id="email" placeholder="Email">
+                        <input type="email" class="form-control form-control-sm" id="txtEmail" placeholder="Email">
                     </div>
 
                     <div class="col-xl-1 col-lg-1 col-md-12 col-sm-12 col-xs-12">
@@ -96,7 +94,7 @@
                     </div>
 
                     <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
-                        <input type="text" class="form-control form-control-sm" id="telefono" placeholder="Telefono">
+                        <input type="text" class="form-control form-control-sm" id="txtPhone" onkeypress="return onlyNumberKey(event)" placeholder="Telefono">
                     </div>
 
                 </div>
@@ -144,6 +142,7 @@
         </div>
     </footer>
 
+    <script src="/js/contact.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
         crossorigin="anonymous"></script>
