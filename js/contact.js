@@ -1,10 +1,24 @@
 
 class Contact {
 
-    constructor(name, surname, email) {
+    constructor(name, surname, email, phone, newsLetter, comments) {
         this.name = name;
         this.surname = surname;
         this.email = email;
+        this.phone = phone;
+        this.newsLetter = newsLetter;
+        this.comments = comments;
+    }
+
+    ValidateContact() { 
+
+        if(this.name == ""){
+            alert("Debe ingresar un nombre");
+            document.getElementById('txtName').focus();
+            return false;
+        }
+
+        return true;
     }
 }
 
@@ -26,15 +40,13 @@ function SendContact() {
     let name = document.getElementById('txtName').value;
     let surname = document.getElementById('txtSurname').value;
     let email = document.getElementById('txtEmail').value;
+    let phone = document.getElementById('txtPhone').value;
+    let newsLetter = document.getElementById('ckNewsLetter').value;
+    let comments = document.getElementById('txtComments').value;
 
-    const contact1 = new Contact(name, surname, email);
+    const contact1 = new Contact(name, surname, email, phone, newsLetter, comments);
 
-    if(ValidateForm()){
+    if(contact1.ValidateContact()){
 
     }
-}
-
-function ValidateForm() { 
-
-    return true;
 }
