@@ -74,33 +74,33 @@ function renderCart() {
     DOMcart.textContent = '';
     // Quitar los duplicados.
     const cartWithoutDuplicates = [...new Set(cart)];
-    // Generamos los Nodos a partir de carrito.
+    // Genero los Nodos a partir de carrito.
     cartWithoutDuplicates.forEach((item) => {
-        // Obtenemos el item que necesitamos de la variable base de datos
+        // Obtengo el ítem que necesito de la variable base de datos.
         const myItem = dataBase.filter((itemDB) => {
-            // ¿Coincide las id? Solo puede existir un caso
+            // ¿Coincide los id? Solo puede existir un caso.
             return itemDB.id === parseInt(item);
         });
-        // Cuenta el número de veces que se repite el producto
-        const numeroUnidadesItem = cart.reduce((total, itemId) => {
-            // ¿Coincide las id? Incremento el contador, en caso contrario no mantengo
+        // Cuenta el número de veces que se repite la oferta.
+        const numberUnitsItem = cart.reduce((total, itemId) => {
+            // ¿Coincide los id? Incremento el contador, en caso contrario no mantengo.
             return itemId === item ? total += 1 : total;
         }, 0);
-        // Creamos el nodo del item del carrito
+        // Creo el nodo del ítem del carrito.
         const myNodo = document.createElement('li');
         myNodo.classList.add('list-group-item', 'text-right', 'mx-2');
 
         myNodo.style = "background:#04305f; color:white; font-size:1.1rem";
 
-        myNodo.textContent = `${numeroUnidadesItem} x ${myItem[0].name} - $ ${myItem[0].precio}`;
-        // Boton de borrar
+        myNodo.textContent = `${numberUnitsItem} x ${myItem[0].name} - $ ${myItem[0].precio}`;
+        // Boton de borrar.
         const myBoton = document.createElement('button');
         myBoton.classList.add('btn', 'btn-danger', 'mx-5');
         myBoton.textContent = 'X';
         myBoton.style.margin = '0.5rem';
         myBoton.dataset.item = item;
-        myBoton.addEventListener('click', borrarItemCarrito);
-        // Mezclamos nodos
+        myBoton.addEventListener('click', deleteItemCart);
+        // Uno nodos.
         myNodo.appendChild(myBoton);
         DOMcart.appendChild(myNodo);
     });
@@ -109,7 +109,7 @@ function renderCart() {
 /**********************************************
  * Evento para borrar un elemento del carrito *
  **********************************************/
-function borrarItemCarrito(event) {
+function deleteItemCart(event) {
 
     // Obtenemos el ID de la oferta.
     const id = event.target.dataset.item;
