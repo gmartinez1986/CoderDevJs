@@ -72,12 +72,12 @@ function addOfferToCart(event) {
 function renderCart() {
     // Vació todo el html.
     DOMcart.textContent = '';
-    // Quitamos los duplicados
-    const carritoSinDuplicados = [...new Set(cart)];
-    // Generamos los Nodos a partir de carrito
-    carritoSinDuplicados.forEach((item) => {
+    // Quitar los duplicados.
+    const cartWithoutDuplicates = [...new Set(cart)];
+    // Generamos los Nodos a partir de carrito.
+    cartWithoutDuplicates.forEach((item) => {
         // Obtenemos el item que necesitamos de la variable base de datos
-        const miItem = dataBase.filter((itemDB) => {
+        const myItem = dataBase.filter((itemDB) => {
             // ¿Coincide las id? Solo puede existir un caso
             return itemDB.id === parseInt(item);
         });
@@ -87,22 +87,22 @@ function renderCart() {
             return itemId === item ? total += 1 : total;
         }, 0);
         // Creamos el nodo del item del carrito
-        const miNodo = document.createElement('li');
-        miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
+        const myNodo = document.createElement('li');
+        myNodo.classList.add('list-group-item', 'text-right', 'mx-2');
 
-        miNodo.style = "background:#04305f; color:white; font-size:1.1rem";
+        myNodo.style = "background:#04305f; color:white; font-size:1.1rem";
 
-        miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].name} - $ ${miItem[0].precio}`;
+        myNodo.textContent = `${numeroUnidadesItem} x ${myItem[0].name} - $ ${myItem[0].precio}`;
         // Boton de borrar
-        const miBoton = document.createElement('button');
-        miBoton.classList.add('btn', 'btn-danger', 'mx-5');
-        miBoton.textContent = 'X';
-        miBoton.style.margin = '0.5rem';
-        miBoton.dataset.item = item;
-        miBoton.addEventListener('click', borrarItemCarrito);
+        const myBoton = document.createElement('button');
+        myBoton.classList.add('btn', 'btn-danger', 'mx-5');
+        myBoton.textContent = 'X';
+        myBoton.style.margin = '0.5rem';
+        myBoton.dataset.item = item;
+        myBoton.addEventListener('click', borrarItemCarrito);
         // Mezclamos nodos
-        miNodo.appendChild(miBoton);
-        DOMcart.appendChild(miNodo);
+        myNodo.appendChild(myBoton);
+        DOMcart.appendChild(myNodo);
     });
 }
 
