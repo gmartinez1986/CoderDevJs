@@ -2,47 +2,47 @@
 const dataBase = [
     {
         id: 1,
-        nombre: 'Findes Largos y Feriados',
+        name: 'Findes Largos y Feriados',
         precio: 27300
     },
     {
         id: 2,
-        nombre: 'Noroeste Argentino',
+        name: 'Noroeste Argentino',
         precio: 30000
     },
     {
         id: 3,
-        nombre: 'Merlo y Carlos Paz',
+        name: 'Merlo y Carlos Paz',
         precio: 20000
     },
     {
         id: 4,
-        nombre: 'San Juan y La Rioja',
+        name: 'San Juan y La Rioja',
         precio: 40000
     },
     {
         id: 5,
-        nombre: 'Bariloche',
+        name: 'Bariloche',
         precio: 50000
     },
     {
         id: 6,
-        nombre: 'Puerto Madryn',
+        name: 'Puerto Madryn',
         precio: 60000
     },
     {
         id: 7,
-        nombre: 'El Calafate + Ushuaia',
+        name: 'El Calafate + Ushuaia',
         precio: 60000
     },
     {
         id: 8,
-        nombre: 'Costa Atlántica',
+        name: 'Costa Atlántica',
         precio: 80000
     },
     {
         id: 9,
-        nombre: 'Noroeste en Avión',
+        name: 'Noroeste en Avión',
         precio: 70000
     }
 
@@ -50,16 +50,18 @@ const dataBase = [
 
 let cart = [];
 let total = 0;
+const DOMcart = document.querySelector('#cart');
+const DOMtotal = document.querySelector('#total');
 
-/**
- * Evento para añadir un producto al carrito de la compra
- */
+/**********************************************************
+ * Evento para añadir un producto al carrito de la compra *
+ **********************************************************/
 function addOfferToCart(event) {
 
     // Anyadimos el Nodo a nuestro carrito
     cart.push(event.target.getAttribute('offerId'))
     // Calculo el total
-    calcularTotal();
+    calculateTotal();
     // Actualizamos el carrito 
     renderizarCarrito();
 }
@@ -69,7 +71,7 @@ function addOfferToCart(event) {
  ******************************************************/
 function renderizarCarrito() {
     // Vaciamos todo el html
-    DOMcarrito.textContent = '';
+    DOMcart.textContent = '';
     // Quitamos los duplicados
     const carritoSinDuplicados = [...new Set(cart)];
     // Generamos los Nodos a partir de carrito
@@ -90,7 +92,7 @@ function renderizarCarrito() {
 
         miNodo.style = "background:#04305f; color:white; font-size:1.1rem";
 
-        miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - $ ${miItem[0].precio}`;
+        miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].name} - $ ${miItem[0].precio}`;
         // Boton de borrar
         const miBoton = document.createElement('button');
         miBoton.classList.add('btn', 'btn-danger', 'mx-5');
@@ -100,7 +102,7 @@ function renderizarCarrito() {
         miBoton.addEventListener('click', borrarItemCarrito);
         // Mezclamos nodos
         miNodo.appendChild(miBoton);
-        DOMcarrito.appendChild(miNodo);
+        DOMcart.appendChild(miNodo);
     });
 }
 
@@ -118,13 +120,13 @@ function borrarItemCarrito(event) {
     // volvemos a renderizar
     renderizarCarrito();
     // Calculamos de nuevo el precio
-    calcularTotal();
+    calculateTotal();
 }
 
-/**
- * Calcula el precio total teniendo en cuenta los productos repetidos
- */
-function calcularTotal() {
+/**********************************************************************
+ * Calcula el precio total teniendo en cuenta los productos repetidos *
+ **********************************************************************/
+function calculateTotal() {
     // Limpiamos precio anterior
     total = 0;
     // Recorremos el array del carrito
@@ -139,14 +141,14 @@ function calcularTotal() {
     DOMtotal.textContent = total.toFixed(2);
 }
 
-/**
- * Varia el carrito y vuelve a dibujarlo
- */
+/********************
+ * Varia el carrito *
+ ********************/
 function emptyCart() {
 
     // Limpiamos los productos guardados
     cart = [];
     // Renderizamos los cambios
     renderizarCarrito();
-    calcularTotal();
+    calculateTotal();
 }
