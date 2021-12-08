@@ -3,47 +3,47 @@ const dataBase = [
     {
         id: 1,
         name: 'Findes Largos y Feriados',
-        precio: 27300
+        price: 27300
     },
     {
         id: 2,
         name: 'Noroeste Argentino',
-        precio: 30000
+        price: 30000
     },
     {
         id: 3,
         name: 'Merlo y Carlos Paz',
-        precio: 20000
+        price: 20000
     },
     {
         id: 4,
         name: 'San Juan y La Rioja',
-        precio: 40000
+        price: 40000
     },
     {
         id: 5,
         name: 'Bariloche',
-        precio: 50000
+        price: 50000
     },
     {
         id: 6,
         name: 'Puerto Madryn',
-        precio: 60000
+        price: 60000
     },
     {
         id: 7,
         name: 'El Calafate + Ushuaia',
-        precio: 60000
+        price: 60000
     },
     {
         id: 8,
         name: 'Costa Atlántica',
-        precio: 80000
+        price: 80000
     },
     {
         id: 9,
         name: 'Noroeste en Avión',
-        precio: 70000
+        price: 70000
     }
 
 ];
@@ -92,7 +92,7 @@ function renderCart() {
 
         myNodo.style = "background:#04305f; color:white; font-size:1.1rem";
 
-        myNodo.textContent = `${numberUnitsItem} x ${myItem[0].name} - $ ${myItem[0].precio}`;
+        myNodo.textContent = `${numberUnitsItem} x ${myItem[0].name} - $ ${myItem[0].price}`;
         // Boton de borrar.
         const myBoton = document.createElement('button');
         myBoton.classList.add('btn', 'btn-danger', 'mx-5');
@@ -100,7 +100,7 @@ function renderCart() {
         myBoton.style.margin = '0.5rem';
         myBoton.dataset.item = item;
         myBoton.addEventListener('click', deleteItemCart);
-        // Uno nodos.
+        // Uno los nodos.
         myNodo.appendChild(myBoton);
         DOMcart.appendChild(myNodo);
     });
@@ -111,33 +111,33 @@ function renderCart() {
  **********************************************/
 function deleteItemCart(event) {
 
-    // Obtenemos el ID de la oferta.
+    // Obtengo el ID de la oferta.
     const id = event.target.dataset.item;
-    // Borramos todos los productos
+    // Borro todas las ofertas.
     cart = cart.filter((offerId) => {
         return offerId !== id;
     });
-    // volvemos a renderizar
+    // Vuelvo a renderizar el carrito.
     renderCart();
-    // Calculamos de nuevo el precio
+    // Calculo de nuevo el precio total.
     calculateTotal();
 }
 
 /**********************************************************************
- * Calcula el precio total teniendo en cuenta los productos repetidos *
+ * Calcula el precio total teniendo en cuenta las ofertas repetidass *
  **********************************************************************/
 function calculateTotal() {
-    // Limpiamos precio anterior
+    // Limpio el total anterior.
     total = 0;
-    // Recorremos el array del carrito
+    // Recorro el array del carrito.
     cart.forEach((item) => {
-        // De cada elemento obtenemos su precio
+        // De cada elemento obtengo su precio.
         const myItem = dataBase.filter((itemBD) => {
             return itemBD.id === parseInt(item);
         });
-        total = total + myItem[0].precio;
+        total = total + myItem[0].price;
     });
-    // Renderizamos el precio en el HTML
+    // Renderizo el precio en el HTML.
     DOMtotal.textContent = total.toFixed(2);
 }
 
@@ -146,9 +146,9 @@ function calculateTotal() {
  ********************/
 function emptyCart() {
 
-    // Limpiamos los productos guardados
+    // Limpio las ofertas guardadas.
     cart = [];
-    // Renderizamos los cambios
+    // Renderizo los cambios.
     renderCart();
     calculateTotal();
 }
