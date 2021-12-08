@@ -54,23 +54,23 @@ const DOMcart = document.querySelector('#cart');
 const DOMtotal = document.querySelector('#total');
 
 /**********************************************************
- * Evento para añadir un producto al carrito de la compra *
+ * Evento para añadir una oferta al carrito de la compra *
  **********************************************************/
 function addOfferToCart(event) {
 
-    // Anyadimos el Nodo a nuestro carrito
+    // Ingreso oferta al carrito.
     cart.push(event.target.getAttribute('offerId'))
-    // Calculo el total
+    // Calculo el total.
     calculateTotal();
-    // Actualizamos el carrito 
-    renderizarCarrito();
+    // Actualizo el carrito. 
+    renderCart();
 }
 
 /******************************************************
- * Dibuja todos los productos guardados en el carrito *
+ * Dibuja todos las ofertas guardados en el carrito *
  ******************************************************/
-function renderizarCarrito() {
-    // Vaciamos todo el html
+function renderCart() {
+    // Vació todo el html.
     DOMcart.textContent = '';
     // Quitamos los duplicados
     const carritoSinDuplicados = [...new Set(cart)];
@@ -118,7 +118,7 @@ function borrarItemCarrito(event) {
         return offerId !== id;
     });
     // volvemos a renderizar
-    renderizarCarrito();
+    renderCart();
     // Calculamos de nuevo el precio
     calculateTotal();
 }
@@ -149,6 +149,6 @@ function emptyCart() {
     // Limpiamos los productos guardados
     cart = [];
     // Renderizamos los cambios
-    renderizarCarrito();
+    renderCart();
     calculateTotal();
 }
