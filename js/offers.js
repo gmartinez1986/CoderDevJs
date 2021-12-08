@@ -1,9 +1,9 @@
 // Variables
-const baseDeDatos = [
+const dataBase = [
     {
         id: 1,
-        nombre: 'Patata',
-        precio: 1
+        nombre: 'Findes Largos y Feriados',
+        precio: 27300
     },
     {
         id: 2,
@@ -23,7 +23,7 @@ const baseDeDatos = [
 
 ];
 
-let carrito = [];
+let cart = [];
 let total = 0;
 const DOMitems = document.querySelector('#items');
 const DOMcarrito = document.querySelector('#carrito');
@@ -74,9 +74,12 @@ const DOMbotonVaciar = document.querySelector('#boton-vaciar');
 /**
  * Evento para añadir un producto al carrito de la compra
  */
-function addOfferToCart(evento) {
+function addOfferToCart(event) {
+
+    debugger
+
     // Anyadimos el Nodo a nuestro carrito
-    carrito.push(evento.target.getAttribute('marcador'))
+    cart.push(event.target.getAttribute('offerId'))
     // Calculo el total
     calcularTotal();
     // Actualizamos el carrito 
@@ -91,28 +94,32 @@ function renderizarCarrito() {
     // Vaciamos todo el html
     DOMcarrito.textContent = '';
     // Quitamos los duplicados
-    const carritoSinDuplicados = [...new Set(carrito)];
+    const carritoSinDuplicados = [...new Set(cart)];
     // Generamos los Nodos a partir de carrito
     carritoSinDuplicados.forEach((item) => {
         // Obtenemos el item que necesitamos de la variable base de datos
-        const miItem = baseDeDatos.filter((itemBaseDatos) => {
+        const miItem = dataBase.filter((itemDB) => {
             // ¿Coincide las id? Solo puede existir un caso
-            return itemBaseDatos.id === parseInt(item);
+            return itemDB.id === parseInt(item);
         });
         // Cuenta el número de veces que se repite el producto
-        const numeroUnidadesItem = carrito.reduce((total, itemId) => {
+        const numeroUnidadesItem = cart.reduce((total, itemId) => {
             // ¿Coincide las id? Incremento el contador, en caso contrario no mantengo
             return itemId === item ? total += 1 : total;
         }, 0);
         // Creamos el nodo del item del carrito
         const miNodo = document.createElement('li');
         miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
-        miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${miItem[0].precio}€`;
+
+        miNodo.style = "background:#04305f; color:white";
+
+      //  style="background:#04305f"
+        miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${miItem[0].precio} $`;
         // Boton de borrar
         const miBoton = document.createElement('button');
         miBoton.classList.add('btn', 'btn-danger', 'mx-5');
         miBoton.textContent = 'X';
-        miBoton.style.marginLeft = '1rem';
+        miBoton.style.margin = '0.5rem';
         miBoton.dataset.item = item;
         miBoton.addEventListener('click', borrarItemCarrito);
         // Mezclamos nodos
@@ -144,12 +151,12 @@ function calcularTotal() {
     // Limpiamos precio anterior
     total = 0;
     // Recorremos el array del carrito
-    carrito.forEach((item) => {
+    cart.forEach((item) => {
         // De cada elemento obtenemos su precio
-        const miItem = baseDeDatos.filter((itemBaseDatos) => {
-            return itemBaseDatos.id === parseInt(item);
+        const myItem = dataBase.filter((itemBD) => {
+            return itemBD.id === parseInt(item);
         });
-        total = total + miItem[0].precio;
+        total = total + myItem[0].precio;
     });
     // Renderizamos el precio en el HTML
     DOMtotal.textContent = total.toFixed(2);
