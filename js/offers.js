@@ -29,64 +29,32 @@ const dataBase = [
         id: 6,
         nombre: 'Puerto Madryn',
         precio: 60000
+    },
+    {
+        id: 7,
+        nombre: 'El Calafate + Ushuaia',
+        precio: 60000
+    },
+    {
+        id: 8,
+        nombre: 'Costa Atlántica',
+        precio: 80000
+    },
+    {
+        id: 9,
+        nombre: 'Noroeste en Avión',
+        precio: 70000
     }
 
 ];
 
 let cart = [];
 let total = 0;
-const DOMitems = document.querySelector('#items');
-const DOMcarrito = document.querySelector('#carrito');
-const DOMtotal = document.querySelector('#total');
-const DOMbotonVaciar = document.querySelector('#boton-vaciar');
-
-// Funciones
-
-/**
- * Dibuja todos los productos a partir de la base de datos. No confundir con el carrito
- */
-/*function renderizarProductos() {
-    baseDeDatos.forEach((info) => {
-        // Estructura
-        const miNodo = document.createElement('div');
-        miNodo.classList.add('card', 'col-sm-4');
-        // Body
-        const miNodoCardBody = document.createElement('div');
-        miNodoCardBody.classList.add('card-body');
-        // Titulo
-        const miNodoTitle = document.createElement('h5');
-        miNodoTitle.classList.add('card-title');
-        miNodoTitle.textContent = info.nombre;
-        // Imagen
-        const miNodoImagen = document.createElement('img');
-        miNodoImagen.classList.add('img-fluid');
-        miNodoImagen.setAttribute('src', info.imagen);
-        // Precio
-        const miNodoPrecio = document.createElement('p');
-        miNodoPrecio.classList.add('card-text');
-        miNodoPrecio.textContent = info.precio + '€';
-        // Boton 
-        const miNodoBoton = document.createElement('button');
-        miNodoBoton.classList.add('btn', 'btn-primary');
-        miNodoBoton.textContent = '+';
-        miNodoBoton.setAttribute('marcador', info.id);
-        miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
-        // Insertamos
-        miNodoCardBody.appendChild(miNodoImagen);
-        miNodoCardBody.appendChild(miNodoTitle);
-        miNodoCardBody.appendChild(miNodoPrecio);
-        miNodoCardBody.appendChild(miNodoBoton);
-        miNodo.appendChild(miNodoCardBody);
-        DOMitems.appendChild(miNodo);
-    });
-}*/
 
 /**
  * Evento para añadir un producto al carrito de la compra
  */
 function addOfferToCart(event) {
-
-    debugger
 
     // Anyadimos el Nodo a nuestro carrito
     cart.push(event.target.getAttribute('offerId'))
@@ -94,12 +62,11 @@ function addOfferToCart(event) {
     calcularTotal();
     // Actualizamos el carrito 
     renderizarCarrito();
-
 }
 
-/**
- * Dibuja todos los productos guardados en el carrito
- */
+/******************************************************
+ * Dibuja todos los productos guardados en el carrito *
+ ******************************************************/
 function renderizarCarrito() {
     // Vaciamos todo el html
     DOMcarrito.textContent = '';
@@ -137,15 +104,16 @@ function renderizarCarrito() {
     });
 }
 
-/**
- * Evento para borrar un elemento del carrito
- */
-function borrarItemCarrito(evento) {
-    // Obtenemos el producto ID que hay en el boton pulsado
-    const id = evento.target.dataset.item;
+/**********************************************
+ * Evento para borrar un elemento del carrito *
+ **********************************************/
+function borrarItemCarrito(event) {
+
+    // Obtenemos el ID de la oferta.
+    const id = event.target.dataset.item;
     // Borramos todos los productos
-    carrito = carrito.filter((carritoId) => {
-        return carritoId !== id;
+    cart = cart.filter((offerId) => {
+        return offerId !== id;
     });
     // volvemos a renderizar
     renderizarCarrito();
@@ -174,16 +142,11 @@ function calcularTotal() {
 /**
  * Varia el carrito y vuelve a dibujarlo
  */
-function vaciarCarrito() {
+function emptyCart() {
+
     // Limpiamos los productos guardados
-    carrito = [];
+    cart = [];
     // Renderizamos los cambios
     renderizarCarrito();
     calcularTotal();
 }
-
-// Eventos
-DOMbotonVaciar.addEventListener('click', vaciarCarrito);
-
-// Inicio
-/*renderizarProductos();*/

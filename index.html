@@ -77,8 +77,8 @@
                             <ul id="carrito" class="list-group"></ul>
                             <hr>
                             <!-- Precio total -->
-                            <p class="text-center" style="color: white; font-size:1.1rem;">Total: <span id="total"></span>&dollar;;</p>
-                            <button id="boton-vaciar" class="btn btn-danger" style="font-size:1.1rem;">Vaciar</button>
+                            <p class="text-center" style="color: white; font-size:1.1rem;">Total: <span id="total">0.00</span>&dollar;;</p>
+                            <button onclick="emptyCart()" id="boton-vaciar" class="btn btn-danger" style="font-size:1.1rem;">Vaciar</button>
                         </aside>
                     </div>
                 </div>
@@ -102,7 +102,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <p class="offers__offerContainer--price">$ 27.300</p>
+                                    <p class="offers__offerContainer--price">$ 27300</p>
                                 </div>
                                 <!--  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#myModal"
@@ -128,7 +128,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <p class="offers__offerContainer--price">$ 30.000</p>
+                                    <p class="offers__offerContainer--price">$ 30000</p>
                                 </div>
                                 <!--     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#myModal"
@@ -154,7 +154,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <p class="offers__offerContainer--price">$ 20.000</p>
+                                    <p class="offers__offerContainer--price">$ 20000</p>
                                 </div>
                                 <!--     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#myModal"
@@ -180,7 +180,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <p class="offers__offerContainer--price">$ 40.000</p>
+                                    <p class="offers__offerContainer--price">$ 40000</p>
                                 </div>
                                 <!--     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#myModal"
@@ -206,7 +206,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <p class="offers__offerContainer--price">$ 50.000</p>
+                                    <p class="offers__offerContainer--price">$ 50000</p>
                                 </div>
                                 <!--     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#myModal"
@@ -232,7 +232,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <p class="offers__offerContainer--price">$ 60.000</p>
+                                    <p class="offers__offerContainer--price">$ 60000</p>
                                 </div>
                                 <!--     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#myModal"
@@ -258,7 +258,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <p class="offers__offerContainer--price">$ 99.999</p>
+                                    <p class="offers__offerContainer--price">$ 90000</p>
                                 </div>
                                 <!--     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#myModal"
@@ -267,7 +267,7 @@
                                     </a>
                                 </div>-->
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <button class="btn btn-invert btn-md" marcador="1" title="Agregar viaje">+</button>
+                                    <button onclick="addOfferToCart(event)" class="btn btn-invert btn-md" offerId="7" title="Agregar viaje">+</button>
                                 </div>
                             </div>
                         </div>
@@ -284,7 +284,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <p class="offers__offerContainer--price">$ 99.999</p>
+                                    <p class="offers__offerContainer--price">$ 80000</p>
                                 </div>
                                 <!--     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#myModal"
@@ -293,7 +293,7 @@
                                     </a>
                                 </div>-->
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <button class="btn btn-invert btn-md" marcador="1" title="Agregar viaje">+</button>
+                                    <button onclick="addOfferToCart(event)" class="btn btn-invert btn-md" offerId="8" title="Agregar viaje">+</button>
                                 </div>
                             </div>
                         </div>
@@ -310,7 +310,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <p class="offers__offerContainer--price">$ 99.999</p>
+                                    <p class="offers__offerContainer--price">$ 70000</p>
                                 </div>
                                 <!--     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#myModal"
@@ -319,7 +319,7 @@
                                     </a>
                                 </div>-->
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <button class="btn btn-invert btn-md" marcador="1" title="Agregar viaje">+</button>
+                                    <button onclick="addOfferToCart(event)" class="btn btn-invert btn-md" offerId="9" title="Agregar viaje">+</button>
                                 </div>
                             </div>
                         </div>
