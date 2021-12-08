@@ -12,13 +12,23 @@ const dataBase = [
     },
     {
         id: 3,
-        nombre: 'Calabacin',
-        precio: 2.1
+        nombre: 'Merlo y Carlos Paz',
+        precio: 20000
     },
     {
         id: 4,
-        nombre: 'Fresas',
-        precio: 0.6
+        nombre: 'San Juan y La Rioja',
+        precio: 40000
+    },
+    {
+        id: 5,
+        nombre: 'Bariloche',
+        precio: 50000
+    },
+    {
+        id: 6,
+        nombre: 'Puerto Madryn',
+        precio: 60000
     }
 
 ];
