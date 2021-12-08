@@ -7,8 +7,8 @@ const dataBase = [
     },
     {
         id: 2,
-        nombre: 'Cebolla',
-        precio: 1.2
+        nombre: 'Noroeste Argentino',
+        precio: 30000
     },
     {
         id: 3,
@@ -111,10 +111,9 @@ function renderizarCarrito() {
         const miNodo = document.createElement('li');
         miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
 
-        miNodo.style = "background:#04305f; color:white";
+        miNodo.style = "background:#04305f; color:white; font-size:1.1rem";
 
-      //  style="background:#04305f"
-        miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${miItem[0].precio} $`;
+        miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - $ ${miItem[0].precio}`;
         // Boton de borrar
         const miBoton = document.createElement('button');
         miBoton.classList.add('btn', 'btn-danger', 'mx-5');
