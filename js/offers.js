@@ -54,7 +54,7 @@ const DOMcart = document.querySelector('#cart');
 const DOMtotal = document.querySelector('#total');
 
 /**********************************************************
- * Evento para añadir una oferta al carrito de la compra *
+ * Evento para añadir una oferta al carrito de compras *
  **********************************************************/
 function addOfferToCart(event) {
 
@@ -67,7 +67,7 @@ function addOfferToCart(event) {
 }
 
 /******************************************************
- * Dibuja todos las ofertas guardados en el carrito *
+ * Dibuja todas las ofertas guardadas en el carrito *
  ******************************************************/
 function renderCart() {
     // Vació todo el html.
@@ -151,4 +151,19 @@ function emptyCart() {
     // Renderizo los cambios.
     renderCart();
     calculateTotal();
+}
+
+function buyNow() {
+
+    if(cart.length > 0){
+
+        alert("GRACIAS POR SU COMPRA!");
+
+        emptyCart();
+
+    }else{
+       
+        alert("Debe elegir al menos una oferta");
+        
+    }
 }
