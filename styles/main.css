@@ -41,8 +41,7 @@
     color: #337ab7 !important; }
 
 .sidebar {
-  background: cyan;
-  background: linear-gradient(90deg, cyan 0%, white 86%); }
+  background: #044179; }
   .sidebar--subtitles {
     font-size: 1.3rem;
     color: gray;
@@ -70,13 +69,19 @@
   background-color: #044179;
   padding-bottom: 2rem; }
 
+.main__grid--sidebar {
+  display: grid;
+  grid-template-columns: 0.8fr 3.2fr;
+  background-color: #044179;
+  padding-bottom: 2rem; }
+
 @media screen and (max-width: 426px) {
-  .main--grid {
+  .main__grid--sidebar {
     display: grid;
     grid-template-columns: none; } }
 
 @media screen and (max-width: 768px) {
-  .main--grid {
+  .main__grid--sidebar {
     display: grid;
     grid-template-columns: none; } }
 

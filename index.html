@@ -6,11 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="agencia,viajes,vacaciones,aereo,bus,argentina,mexico,peru,brasil">
-    <meta name="description" content="Destinos nacionales e internacionales. Paquetes turísticos. Vacaciones en Argentina, México, Perú, Brasil">
+    <meta name="description"
+        content="Destinos nacionales e internacionales. Paquetes turísticos. Vacaciones en Argentina, México, Perú, Brasil">
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Archivo:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Archivo:wght@100&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="./styles/font-awesome.css" rel="stylesheet">
     <link href="./styles/css/bootstrap.css" rel="stylesheet">
@@ -46,10 +48,13 @@
                                 <span class="material-icons home">home</span>
                             </a>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="./pages/packages/argentina.html"><b>ARGENTINA</b></a></li>
-                        <li class="nav-item"><a class="nav-link" href="./pages/destinations.html"><b>DESTINOS</b></a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="./pages/packages/argentina.html"><b>ARGENTINA</b></a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/destinations.html"><b>DESTINOS</b></a>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="./pages/offers.html"><b>OFERTAS</b></a></li>
-                        <li class="nav-item"><a class="nav-link" href="./pages/contact.html"><span class="material-icons email">email</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/contact.html"><span
+                                    class="material-icons email">email</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -60,7 +65,28 @@
     <main class="main">
 
         <!--Sección Ofertas-->
-        <section class="main--grid">
+        <section class="main__grid--sidebar">
+
+            <div class="sidebar">
+
+                <div class="container">
+                    <div class="row">
+                        <!-- Elementos generados a partir del JSON -->
+                     <!--     <main id="items" class="col-sm-8 row"></main> -->
+                        <!-- Carrito -->
+                        <aside>
+                            <h3 class="titles--subtitlesH3">Carrito</h3>
+                            <!-- Elementos del carrito -->
+                            <ul id="carrito" class="list-group"></ul>
+                            <hr>
+                            <!-- Precio total -->
+                            <p class="text-center" style="color: white;">Total: <span id="total"></span>&dollar;;</p>
+                            <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+                        </aside>
+                    </div>
+                </div>
+
+            </div>
 
             <div class="container offers" id="divArgentina">
                 <h2 class="titles--subtitlesH2">Destacados</h2>
@@ -81,11 +107,14 @@
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <p class="offers__offerContainer--price">$ 99.999</p>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <!--  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#myModal"
                                         class="btn btn-invert btn-md">
                                         <span>Quiero viajar!</span>
                                     </a>
+                                </div>-->
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <button onclick="addOfferToCart(evento)" class="btn btn-invert btn-md" marcador="1" title="Agregar viaje">+</button>
                                 </div>
                             </div>
                         </div>
@@ -104,11 +133,14 @@
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <p class="offers__offerContainer--price">$ 99.999</p>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <!--     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#myModal"
                                         class="btn btn-invert btn-md">
                                         <span>Quiero viajar!</span>
                                     </a>
+                                </div>-->
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <button class="btn btn-invert btn-md" marcador="1" title="Agregar viaje">+</button>
                                 </div>
                             </div>
                         </div>
@@ -127,11 +159,14 @@
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <p class="offers__offerContainer--price">$ 99.999</p>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <!--     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#myModal"
                                         class="btn btn-invert btn-md">
                                         <span>Quiero viajar!</span>
                                     </a>
+                                </div>-->
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <button class="btn btn-invert btn-md" marcador="1" title="Agregar viaje">+</button>
                                 </div>
                             </div>
                         </div>
@@ -150,11 +185,14 @@
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <p class="offers__offerContainer--price">$ 99.999</p>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <!--     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#myModal"
                                         class="btn btn-invert btn-md">
                                         <span>Quiero viajar!</span>
                                     </a>
+                                </div>-->
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <button class="btn btn-invert btn-md" marcador="1" title="Agregar viaje">+</button>
                                 </div>
                             </div>
                         </div>
@@ -173,11 +211,14 @@
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <p class="offers__offerContainer--price">$ 99.999</p>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <!--     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#myModal"
                                         class="btn btn-invert btn-md">
                                         <span>Quiero viajar!</span>
                                     </a>
+                                </div>-->
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <button class="btn btn-invert btn-md" marcador="1" title="Agregar viaje">+</button>
                                 </div>
                             </div>
                         </div>
@@ -196,11 +237,14 @@
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <p class="offers__offerContainer--price">$ 99.999</p>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <!--     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#myModal"
                                         class="btn btn-invert btn-md">
                                         <span>Quiero viajar!</span>
                                     </a>
+                                </div>-->
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <button class="btn btn-invert btn-md" marcador="1" title="Agregar viaje">+</button>
                                 </div>
                             </div>
                         </div>
@@ -219,11 +263,14 @@
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <p class="offers__offerContainer--price">$ 99.999</p>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <!--     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#myModal"
                                         class="btn btn-invert btn-md">
                                         <span>Quiero viajar!</span>
                                     </a>
+                                </div>-->
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <button class="btn btn-invert btn-md" marcador="1" title="Agregar viaje">+</button>
                                 </div>
                             </div>
                         </div>
@@ -242,11 +289,14 @@
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <p class="offers__offerContainer--price">$ 99.999</p>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <!--     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#myModal"
                                         class="btn btn-invert btn-md">
                                         <span>Quiero viajar!</span>
                                     </a>
+                                </div>-->
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <button class="btn btn-invert btn-md" marcador="1" title="Agregar viaje">+</button>
                                 </div>
                             </div>
                         </div>
@@ -265,11 +315,14 @@
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <p class="offers__offerContainer--price">$ 99.999</p>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <!--     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#myModal"
                                         class="btn btn-invert btn-md">
                                         <span>Quiero viajar!</span>
                                     </a>
+                                </div>-->
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <button class="btn btn-invert btn-md" marcador="1" title="Agregar viaje">+</button>
                                 </div>
                             </div>
                         </div>
@@ -322,40 +375,45 @@
 
                             <div class="row modal__panel-body--row">
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6 text-center">
-                                    <h5>Consultas WhatsApp</h5> 
+                                    <h5>Consultas WhatsApp</h5>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6 text-center">
-                                    <h5>Consultas Facebook</h5> 
+                                    <h5>Consultas Facebook</h5>
                                 </div>
                             </div>
 
                             <div class="row modal__panel-body--row">
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6 text-center">
-                                    <a class="page-scroll btn btn-invert btn-sm" href="https://wa.me/123456789" target="_blank">Contactar en WhatsApp</a>
+                                    <a class="page-scroll btn btn-invert btn-sm" href="https://wa.me/123456789"
+                                        target="_blank">Contactar en WhatsApp</a>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6 text-center">
-                                    <a class="page-scroll btn btn-invert btn-sm" href="http://m.me/agencia" target="_blank">Contactar en Facebook</a>
+                                    <a class="page-scroll btn btn-invert btn-sm" href="http://m.me/agencia"
+                                        target="_blank">Contactar en Facebook</a>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6 text-center">
-                                    <h5>Consultas en Instagram</h5> 
+                                    <h5>Consultas en Instagram</h5>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6 text-center">
-                                    <h5>Consultas por Email</h5> 
+                                    <h5>Consultas por Email</h5>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6 text-center">
-                                    <a class="page-scroll btn btn-invert btn-sm" href="https://www.instagram.com/agencia/" target="_blank">Contactar en Instagram</a>
+                                    <a class="page-scroll btn btn-invert btn-sm"
+                                        href="https://www.instagram.com/agencia/" target="_blank">Contactar en
+                                        Instagram</a>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6 text-center">
-                                    <a class="page-scroll btn btn-invert btn-sm" href="mailto:agencia@gmail.com" target="_blank">Contactar por Email</a>
+                                    <a class="page-scroll btn btn-invert btn-sm" href="mailto:agencia@gmail.com"
+                                        target="_blank">Contactar por Email</a>
                                 </div>
                             </div>
-             
+
                         </div>
 
                         <div class="modal--panel-heading">
@@ -381,7 +439,7 @@
                                     <span><a class="modal__panel-body--phone" href="tel:123456789">123456789</a></span>
                                 </div>
                             </div>
-                            
+
                             <div class="row modal__panel-body--row">
                                 <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 col-11 text-center">
                                     <h5><b>Agencia de Turismo</b></h5>
@@ -397,7 +455,7 @@
         </div>
     </div>
 
-    <script src="/js/index.js"></script>
+    <script src="/js/offers.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
         crossorigin="anonymous"></script>
@@ -405,4 +463,5 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
 </body>
+
 </html>

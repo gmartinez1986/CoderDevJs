@@ -6,9 +6,16 @@
         padding-bottom: 2rem;
     }
 
+    &__grid--sidebar{
+        display: grid;
+        grid-template-columns: 0.8fr 3.2fr; 
+        background-color: #044179;
+        padding-bottom: 2rem;
+    }
+
     @include  mobile {
     
-        &--grid{
+        &__grid--sidebar{
             display: grid;
             grid-template-columns: none; 
         }
@@ -16,7 +23,7 @@
     
     @include tablet {
       
-        &--grid{
+        &__grid--sidebar{
             display: grid;
             grid-template-columns: none; 
         }   
