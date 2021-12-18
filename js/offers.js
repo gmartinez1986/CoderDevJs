@@ -54,6 +54,15 @@ const DOMcart = document.querySelector('#cart');
 const DOMtotal = document.querySelector('#total');
 
 /**********************************************************
+ * Agrego el evento para agragar ofertas a cada boton *
+ **********************************************************/
+let btnAddOffer = document.getElementsByClassName('btnAddOffer');
+
+for (let i = 0; i < btnAddOffer.length; i++) {
+    btnAddOffer[i].addEventListener('click', addOfferToCart);
+}
+
+/**********************************************************
  * Evento para añadir una oferta al carrito de compras *
  **********************************************************/
 function addOfferToCart(event) {
