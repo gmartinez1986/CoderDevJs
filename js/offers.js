@@ -53,14 +53,22 @@ let total = 0;
 const DOMcart = document.querySelector('#cart');
 const DOMtotal = document.querySelector('#total');
 
-/**********************************************************
- * Agrego el evento para agragar ofertas a cada boton *
- **********************************************************/
+/****************************************************************
+ * Vincular eventos a los distintos elementos según corresponda *
+ ****************************************************************/
 let btnAddOffer = document.getElementsByClassName('btnAddOffer');
 
 for (let i = 0; i < btnAddOffer.length; i++) {
     btnAddOffer[i].addEventListener('click', addOfferToCart);
 }
+
+let btnEmpty = document.getElementById('btn-empty');
+btnEmpty.addEventListener('click', emptyCart);
+
+let btnBuy = document.getElementById('btn-buy');
+btnBuy.addEventListener('click', buyNow);
+
+/**********************************************************/
 
 /**********************************************************
  * Evento para añadir una oferta al carrito de compras *

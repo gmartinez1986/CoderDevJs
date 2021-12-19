@@ -1,4 +1,14 @@
 
+/****************************************************************
+ * Vincular eventos a los distintos elementos según corresponda *
+ ****************************************************************/
+let txtPhone = document.getElementById('txtPhone');
+txtPhone.addEventListener('keypress', onlyNumberKey);
+
+
+let sendContact = document.getElementById('sendContact');
+sendContact.addEventListener('click', SendContact);
+
 //Clase contacto.
 class Contact {
 
@@ -46,12 +56,12 @@ class Contact {
 //Función que devuelve TRUE si el carácter evaluado es un numero, sino devuelve FALSE.
 //Esta función se utiliza en evento "onkeypress" en los input de tipo text para que el usuario solo ingrese numeros.
 function onlyNumberKey(evt) {
-          
+
     //Solo se permiten caracteres ASCII en ese rango.
     var ASCIICode = (evt.which) ? evt.which : evt.keyCode
     if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
-        return false;
-    return true;
+        evt.returnValue = false;
+    evt.returnValue = true;
 }
 
 //Función para enviar info de contacto.
