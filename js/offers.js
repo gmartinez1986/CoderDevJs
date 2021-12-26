@@ -48,11 +48,6 @@ const dataBase = [
 
 ];
 
-let cart = [];
-let total = 0;
-const DOMcart = document.querySelector('#cart');
-const DOMtotal = document.querySelector('#total');
-
 /****************************************************************
  * Vincular eventos a los distintos elementos según corresponda *
  ****************************************************************/
@@ -76,7 +71,11 @@ btnBuy.addEventListener('click', buyNow);
 function addOfferToCart(event) {
 
     // Ingreso oferta al carrito.
-    cart.push(event.target.getAttribute('offerId'))
+    cart.push(event.target.getAttribute('offerId'));
+
+    // Actualizo el Local Storage.
+    localStorage.setItem("cart", JSON.stringify(cart));
+
     // Calculo el total.
     calculateTotal();
     // Actualizo el carrito. 
@@ -134,6 +133,9 @@ function deleteItemCart(event) {
     cart = cart.filter((offerId) => {
         return offerId !== id;
     });
+    // Actualizo el Local Storage.
+    localStorage.setItem("cart", JSON.stringify(cart));
+
     // Vuelvo a renderizar el carrito.
     renderCart();
     // Calculo de nuevo el precio total.
@@ -165,6 +167,8 @@ function emptyCart() {
 
     // Limpio las ofertas guardadas.
     cart = [];
+    // Actualizo el Local Storage.
+    localStorage.setItem("cart", JSON.stringify(cart));
     // Renderizo los cambios.
     renderCart();
     calculateTotal();
@@ -184,3 +188,15 @@ function buyNow() {
         
     }
 }
+
+// Inicializo el carrito, en caso de que el Local Storege tenga un carrito pre cargado, uso la información pre cargada.
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let total = 0;
+
+const DOMcart = document.querySelector('#cart');
+const DOMtotal = document.querySelector('#total');
+
+// Calculo el total.
+calculateTotal();
+// Actualizo el carrito. 
+renderCart();
