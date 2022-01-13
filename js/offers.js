@@ -60,8 +60,10 @@ $(document).ready(function () {
         * Evento para añadir una oferta al carrito de compras *
         **********************************************************/
         $(btnAddOffer[i]).click(function (event) {
+
+            let offerId = $(event.target).attr('offerId');
             // Ingreso oferta al carrito.
-            cart.push($(event.target).attr('offerId'));
+            cart.push(offerId);
 
             // Actualizo el Local Storage.
             localStorage.setItem("cart", JSON.stringify(cart));
@@ -69,7 +71,7 @@ $(document).ready(function () {
             // Calculo el total.
             calculateTotal();
             // Actualizo el carrito. 
-            renderCart();
+            renderCart(offerId);
         });
     }
 
@@ -82,9 +84,9 @@ $(document).ready(function () {
     /**********************************************************/
 
     /******************************************************
-     * Dibuja todas las ofertas guardadas en el carrito *
+     * Dibuja todas las ofertas guardadas en el carrito   *
      ******************************************************/
-    function renderCart() {
+    function renderCart(offerId) {
         // Vació todo el html.
         DOMcart.textContent = '';
         // Quitar los duplicados.
@@ -106,7 +108,7 @@ $(document).ready(function () {
             myNodo.classList.add('list-group-item', 'text-right', 'mx-2');
 
             myNodo.style = "background:#04305f; color:white; font-size:1.1rem";
-
+ 
             myNodo.textContent = `${numberUnitsItem} x ${myItem[0].name} - $ ${myItem[0].price}`;
             // Boton de borrar.
             const myBoton = document.createElement('button');
@@ -114,10 +116,28 @@ $(document).ready(function () {
             myBoton.textContent = 'X';
             myBoton.style.margin = '0.5rem';
             myBoton.dataset.item = item;
-            myBoton.addEventListener('click', deleteItemCart);
+            $(myBoton).on('click', deleteItemCart);
             // Uno los nodos.
             myNodo.appendChild(myBoton);
+            // Oculto los elementos del carrito.
+            $(myNodo).hide();
+            // Identifico el elemento que se acaba de seleccionar.
+            if(item == offerId){
+                // Muestro lentamente el elemento seleccionado.
+                $(myNodo).fadeIn(2000, function() {
+                    // Mueve el elemento seleccionado hacia la izquierda.
+                    $(this).animate({left: '250px'}).css('zIndex', '9999');
+                    // Vuelvo a colocar el elemento en su posición original.
+                    $(this).animate({left: '0px'});
+                });
+            }
+            else
+            {
+                // Sino es el elemento que se acaba de seleccionar, lo muestro.
+                $(myNodo).show();
+            }
             DOMcart.appendChild(myNodo);
+
         });
     }
 
