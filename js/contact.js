@@ -28,9 +28,18 @@ $(document).ready(function() {
     
         //Validar info ingresada.
         if(contact1.ValidateContact()){
-    
-            alert("Se envio la información");
-            $('#frmContact').trigger("reset");
+
+            //Hago una llamada GET utilizando AJAX, para obtener los personajes de Harry Potter.
+            $.ajax({
+                method: "GET",
+                url: "http://hp-api.herokuapp.com/api/characters",
+                success: function(res){
+
+                    $('#frmContact').trigger("reset");
+                    //Tomo el nombre del primer personaje.
+                    alert(`Se envió la información, ${res[0].name} te agradece.`);
+                }
+            });
         }
     });
 
