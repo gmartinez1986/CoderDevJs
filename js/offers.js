@@ -57,8 +57,8 @@ $(document).ready(function () {
     for (let i = 0; i < btnAddOffer.length; i++) {
         
         /**********************************************************
-        * Evento para añadir una oferta al carrito de compras *
-        **********************************************************/
+         * Evento para añadir una oferta al carrito de compras    *
+         **********************************************************/
         $(btnAddOffer[i]).click(function (event) {
 
             let offerId = $(event.target).attr('offerId');
@@ -81,7 +81,7 @@ $(document).ready(function () {
     let btnBuy = $('#btn-buy');
     $(btnBuy).on('click', buyNow);
 
-    /**********************************************************/
+    /****************************************************************/
 
     /******************************************************
      * Dibuja todas las ofertas guardadas en el carrito   *

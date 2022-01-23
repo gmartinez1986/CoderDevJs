@@ -12,6 +12,9 @@ $color-header: rgb(4,48,95);
     
     text-align: center;
     border-bottom: thin solid white;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
 
     &__containerHeader{ 
         justify-content: space-between;
