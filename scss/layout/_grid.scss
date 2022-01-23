@@ -15,7 +15,8 @@
     }
 
     @include  mobile {
-    
+        padding: 0 0 0 0;
+
         &__grid--sidebar{
             display: grid;
             grid-template-columns: none; 
@@ -23,6 +24,7 @@
     }
     
     @include tablet {
+        padding: 0 0 0 0;
       
         &__grid--sidebar{
             display: grid;

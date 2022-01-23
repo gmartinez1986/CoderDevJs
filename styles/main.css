@@ -79,13 +79,17 @@
     background-color: #044179;
     padding-bottom: 2rem; }
   @media screen and (max-width: 426px) {
-    .main__grid--sidebar {
-      display: grid;
-      grid-template-columns: none; } }
+    .main {
+      padding: 0 0 0 0; }
+      .main__grid--sidebar {
+        display: grid;
+        grid-template-columns: none; } }
   @media screen and (max-width: 768px) {
-    .main__grid--sidebar {
-      display: grid;
-      grid-template-columns: none; } }
+    .main {
+      padding: 0 0 0 0; }
+      .main__grid--sidebar {
+        display: grid;
+        grid-template-columns: none; } }
 
 .footer {
   padding-top: 1rem;

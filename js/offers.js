@@ -124,12 +124,7 @@ $(document).ready(function () {
             // Identifico el elemento que se acaba de seleccionar.
             if(item == offerId){
                 // Muestro lentamente el elemento seleccionado.
-                $(myNodo).fadeIn(2000, function() {
-                    // Mueve el elemento seleccionado hacia la izquierda.
-                    $(this).animate({left: '250px'}).css('zIndex', '9999');
-                    // Vuelvo a colocar el elemento en su posición original.
-                    $(this).animate({left: '0px'});
-                });
+                $(myNodo).fadeIn(2000);
             }
             else
             {
@@ -161,9 +156,9 @@ $(document).ready(function () {
         calculateTotal();
     }
 
-    /**********************************************************************
+    /*********************************************************************
      * Calcula el precio total teniendo en cuenta las ofertas repetidass *
-     **********************************************************************/
+     *********************************************************************/
     function calculateTotal() {
         // Limpio el total anterior.
         total = 0;
