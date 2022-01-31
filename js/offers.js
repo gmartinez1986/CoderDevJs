@@ -4,84 +4,130 @@ $(document).ready(function () {
         {
             id: 1,
             name: 'Findes Largos y Feriados',
-            price: 27300
+            price: 27300,
+            image: 'viajes-vacaciones-feriado-finde-largo.jpg',
+            description: 'Viajes para Feriados y Findes Largos. No te lo pierdas!'
         },
         {
             id: 2,
             name: 'Noroeste Argentino',
-            price: 30000
+            price: 30000,
+            image: 'noa-montana-7-colores.jpg',
+            description: 'Viví tradición y explora los bellos paisajes en el Noroeste.'
         },
         {
             id: 3,
             name: 'Merlo y Carlos Paz',
-            price: 20000
+            price: 20000,
+            image: 'viajes-merlo-san-luis-sierras.jpg',
+            description: 'Un bello y tranquilo recorrido por Neuquén. Para disfrutar en familia.'
         },
         {
             id: 4,
             name: 'San Juan y La Rioja',
-            price: 40000
+            price: 40000,
+            image: 'campo-piedra-pomez-excursiones.jpg',
+            description: 'Viajes que recorren paisajes enigmáticos y antiguos. Descubrilos!'
         },
         {
             id: 5,
             name: 'Bariloche',
-            price: 50000
+            price: 50000,
+            image: 'viajes-bariloche-desde-rosario.jpg',
+            description: 'Viajes a Bariloche, San Martín de los Andes y Villa la Angostura.'
         },
         {
             id: 6,
             name: 'Puerto Madryn',
-            price: 60000
+            price: 60000,
+            image: 'madryn-navegacion-ballenas.jpg',
+            description: 'Ciudad de Ballenas, Pingüinos, playas y mucha fauna marina!'
         },
         {
             id: 7,
             name: 'El Calafate + Ushuaia',
-            price: 60000
+            price: 60000,
+            image: 'ushuaia-viajes-excursiones-faro.jpg',
+            description: 'Volá en este hermoso viaje a Ushuaia y El Calafate. Descubri sus maravillas!'
         },
         {
             id: 8,
             name: 'Costa Atlántica',
-            price: 80000
+            price: 80000,
+            image: 'costa-atlantica-vacaciones.jpg',
+            description: 'Viajá a la Costa Atlántica: Pinamar, San Bernardo y Mar de Ajó.'
         },
         {
             id: 9,
             name: 'Noroeste en Avión',
-            price: 70000
+            price: 70000,
+            image: 'viajes-noroeste-aereo-desde-rosario.jpg',
+            description: 'Viajes en avión al Noroeste Argentino. No te lo pierdas!'
         }
-
     ];
 
-    /****************************************************************
-     * Vincular eventos a los distintos elementos según corresponda *
-     ****************************************************************/
-    let btnAddOffer = $('.btnAddOffer');
+    //Ruta donde estan las imagenes.
+    const imagePath = './assets/img/';
 
-    for (let i = 0; i < btnAddOffer.length; i++) {
-        
-        /**********************************************************
-         * Evento para añadir una oferta al carrito de compras    *
-         **********************************************************/
-        $(btnAddOffer[i]).click(function (event) {
+   /******************************************************
+    * Dibuja todas las ofertas                           *
+    ******************************************************/
+    function renderOffers() {
+        const DOMitems = document.querySelector('#items');
+        dataBase.forEach((info) => {
 
-            let offerId = $(event.target).attr('offerId');
-            // Ingreso oferta al carrito.
-            cart.push(offerId);
+            // Estructura
+            const myNode = document.createElement('div');
+            myNode.classList.add('col-xl-4', 'col-lg-6', 'col-md-6', 'col-sm-12', 'col-xs-12');
+            // Body
+            const myNodeBody = document.createElement('div');
+            myNodeBody.classList.add('offers__offerContainer');
+            // Titulo
+            const myNodeTitle = document.createElement('h5');
+            myNodeTitle.classList.add('offers__offerContainer--title');
+            myNodeTitle.textContent = info.name;
+            // Imagen
+            const myNodeImage = document.createElement('div');
+            const myImage = document.createElement('img');
+            myImage.classList.add('offers__offerContainer--imgPromo');
+            myImage.setAttribute('src', imagePath + info.image);
+            myImage.setAttribute('alt', info.name);
+            myNodeImage.appendChild(myImage);
+            const myDescription = document.createElement('p');
+            myDescription.classList.add('offers__offerContainer--text');
+            myDescription.textContent = info.description;
+            myNodeImage.appendChild(myDescription);
 
-            // Actualizo el Local Storage.
-            localStorage.setItem("cart", JSON.stringify(cart));
+            const myNodeRow = document.createElement('div');
+            myNodeRow.classList.add('row');
+            const myNodeColPrice = document.createElement('div');
+            myNodeColPrice.classList.add('col-lg-6', 'col-md-6', 'col-sm-12', 'col-xs-12');
 
-            // Calculo el total.
-            calculateTotal();
-            // Actualizo el carrito. 
-            renderCart(offerId);
+            // Precio
+            const myNodePrice = document.createElement('p');
+            myNodePrice.classList.add('offers__offerContainer--price');
+            myNodePrice.textContent = `$ ${info.price}`;
+            myNodeColPrice.appendChild(myNodePrice);
+            myNodeRow.appendChild(myNodeColPrice);
+            
+            // Boton 
+            const myNodeColButton = document.createElement('div');
+            myNodeColButton.classList.add('col-lg-6', 'col-md-6', 'col-sm-12', 'col-xs-12');
+            const myNodeButton = document.createElement('button');
+            myNodeButton.setAttribute('offerId', info.id);
+            myNodeButton.classList.add('btn', 'btn-invert', 'btn-md', 'btnAddOffer');
+            myNodeButton.textContent = '+';
+            myNodeColButton.appendChild(myNodeButton);
+            myNodeRow.appendChild(myNodeColButton)
+
+            // Insertamos
+            myNodeBody.appendChild(myNodeTitle);
+            myNodeBody.appendChild(myNodeImage);
+            myNodeBody.appendChild(myNodeRow);
+            myNode.appendChild(myNodeBody);
+            DOMitems.appendChild(myNode);
         });
     }
-
-    let btnEmpty = $('#btn-empty');
-    $(btnEmpty).on('click', emptyCart);
-
-    let btnBuy = $('#btn-buy');
-    $(btnBuy).on('click', buyNow);
-
-    /****************************************************************/
 
     /******************************************************
      * Dibuja todas las ofertas guardadas en el carrito   *
@@ -108,7 +154,7 @@ $(document).ready(function () {
             myNodo.classList.add('list-group-item', 'text-right', 'mx-2');
 
             myNodo.style = "background:#04305f; color:white; font-size:1.1rem";
- 
+
             myNodo.textContent = `${numberUnitsItem} x ${myItem[0].name} - $ ${myItem[0].price}`;
             // Boton de borrar.
             const myBoton = document.createElement('button');
@@ -122,12 +168,11 @@ $(document).ready(function () {
             // Oculto los elementos del carrito.
             $(myNodo).hide();
             // Identifico el elemento que se acaba de seleccionar.
-            if(item == offerId){
+            if (item == offerId) {
                 // Muestro lentamente el elemento seleccionado.
                 $(myNodo).fadeIn(2000);
             }
-            else
-            {
+            else {
                 // Sino es el elemento que se acaba de seleccionar, lo muestro.
                 $(myNodo).show();
             }
@@ -210,8 +255,43 @@ $(document).ready(function () {
     const DOMcart = document.querySelector('#cart');
     const DOMtotal = document.querySelector('#total');
 
+    renderOffers()
     // Calculo el total.
     calculateTotal();
     // Actualizo el carrito. 
     renderCart();
+
+    /****************************************************************
+    * Vincular eventos a los distintos elementos según corresponda *
+    ****************************************************************/
+    let btnAddOffer = $('.btnAddOffer');
+
+    for (let i = 0; i < btnAddOffer.length; i++) {
+
+        /**********************************************************
+         * Evento para añadir una oferta al carrito de compras    *
+         **********************************************************/
+        $(btnAddOffer[i]).click(function (event) {
+
+            let offerId = $(event.target).attr('offerId');
+            // Ingreso oferta al carrito.
+            cart.push(offerId);
+
+            // Actualizo el Local Storage.
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            // Calculo el total.
+            calculateTotal();
+            // Actualizo el carrito. 
+            renderCart(offerId);
+        });
+    }
+
+    let btnEmpty = $('#btn-empty');
+    $(btnEmpty).on('click', emptyCart);
+
+    let btnBuy = $('#btn-buy');
+    $(btnBuy).on('click', buyNow);
+
+    /****************************************************************/
 });
