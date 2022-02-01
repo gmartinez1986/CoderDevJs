@@ -1,0 +1,67 @@
+{
+    "offers": [
+        {
+            "id": 1,
+            "name": "Findes Largos y Feriados",
+            "price": 27300,
+            "image": "viajes-vacaciones-feriado-finde-largo.jpg",
+            "description": "Viajes para Feriados y Findes Largos. No te lo pierdas!"
+        },
+        {
+            "id": 2,
+            "name": "Noroeste Argentino",
+            "price": 30000,
+            "image": "noa-montana-7-colores.jpg",
+            "description": "Viví tradición y explora los bellos paisajes en el Noroeste."
+        },
+        {
+            "id": 3,
+            "name": "Merlo y Carlos Paz",
+            "price": 20000,
+            "image": "viajes-merlo-san-luis-sierras.jpg",
+            "description": "Un bello y tranquilo recorrido por Neuquén. Para disfrutar en familia."
+        },
+        {
+            "id": 4,
+            "name": "San Juan y La Rioja",
+            "price": 40000,
+            "image": "campo-piedra-pomez-excursiones.jpg",
+            "description": "Viajes que recorren paisajes enigmáticos y antiguos. Descubrilos!"
+        },
+        {
+            "id": 5,
+            "name": "Bariloche",
+            "price": 50000,
+            "image": "viajes-bariloche-desde-rosario.jpg",
+            "description": "Viajes a Bariloche, San Martín de los Andes y Villa la Angostura."
+        },
+        {
+            "id": 6,
+            "name": "Puerto Madryn",
+            "price": 60000,
+            "image": "madryn-navegacion-ballenas.jpg",
+            "description": "Ciudad de Ballenas, Pingüinos, playas y mucha fauna marina!"
+        },
+        {
+            "id": 7,
+            "name": "El Calafate + Ushuaia",
+            "price": 60000,
+            "image": "ushuaia-viajes-excursiones-faro.jpg",
+            "description": "Volá en este hermoso viaje a Ushuaia y El Calafate. Descubri sus maravillas!"
+        },
+        {
+            "id": 8,
+            "name": "Costa Atlántica",
+            "price": 80000,
+            "image": "costa-atlantica-vacaciones.jpg",
+            "description": "Viajá a la Costa Atlántica: Pinamar, San Bernardo y Mar de Ajó."
+        },
+        {
+            "id": 9,
+            "name": "Noroeste en Avión",
+            "price": 70000,
+            "image": "viajes-noroeste-aereo-desde-rosario.jpg",
+            "description": "Viajes en avión al Noroeste Argentino. No te lo pierdas!"
+        }
+    ]
+}
