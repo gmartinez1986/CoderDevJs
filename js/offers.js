@@ -1,297 +1,240 @@
 $(document).ready(function () {
-    // Variables
-    const dataBase = [
-        {
-            id: 1,
-            name: 'Findes Largos y Feriados',
-            price: 27300,
-            image: 'viajes-vacaciones-feriado-finde-largo.jpg',
-            description: 'Viajes para Feriados y Findes Largos. No te lo pierdas!'
-        },
-        {
-            id: 2,
-            name: 'Noroeste Argentino',
-            price: 30000,
-            image: 'noa-montana-7-colores.jpg',
-            description: 'Viví tradición y explora los bellos paisajes en el Noroeste.'
-        },
-        {
-            id: 3,
-            name: 'Merlo y Carlos Paz',
-            price: 20000,
-            image: 'viajes-merlo-san-luis-sierras.jpg',
-            description: 'Un bello y tranquilo recorrido por Neuquén. Para disfrutar en familia.'
-        },
-        {
-            id: 4,
-            name: 'San Juan y La Rioja',
-            price: 40000,
-            image: 'campo-piedra-pomez-excursiones.jpg',
-            description: 'Viajes que recorren paisajes enigmáticos y antiguos. Descubrilos!'
-        },
-        {
-            id: 5,
-            name: 'Bariloche',
-            price: 50000,
-            image: 'viajes-bariloche-desde-rosario.jpg',
-            description: 'Viajes a Bariloche, San Martín de los Andes y Villa la Angostura.'
-        },
-        {
-            id: 6,
-            name: 'Puerto Madryn',
-            price: 60000,
-            image: 'madryn-navegacion-ballenas.jpg',
-            description: 'Ciudad de Ballenas, Pingüinos, playas y mucha fauna marina!'
-        },
-        {
-            id: 7,
-            name: 'El Calafate + Ushuaia',
-            price: 60000,
-            image: 'ushuaia-viajes-excursiones-faro.jpg',
-            description: 'Volá en este hermoso viaje a Ushuaia y El Calafate. Descubri sus maravillas!'
-        },
-        {
-            id: 8,
-            name: 'Costa Atlántica',
-            price: 80000,
-            image: 'costa-atlantica-vacaciones.jpg',
-            description: 'Viajá a la Costa Atlántica: Pinamar, San Bernardo y Mar de Ajó.'
-        },
-        {
-            id: 9,
-            name: 'Noroeste en Avión',
-            price: 70000,
-            image: 'viajes-noroeste-aereo-desde-rosario.jpg',
-            description: 'Viajes en avión al Noroeste Argentino. No te lo pierdas!'
-        }
-    ];
 
-    //Ruta donde estan las imagenes.
-    const imagePath = './assets/img/';
+    //Busco las ofertas en el archivo JSON.
+    fetch('js/dataBase.json')
+        .then(response => response.json())
+        .then(function (data) {
 
-   /******************************************************
-    * Dibuja todas las ofertas                           *
-    ******************************************************/
-    function renderOffers() {
-        const DOMitems = document.querySelector('#items');
-        dataBase.forEach((info) => {
+            //Tomo las ofertas del archivo JSON.
+            const dataBase = data.offers;
 
-            // Estructura
-            const myNode = document.createElement('div');
-            myNode.classList.add('col-xl-4', 'col-lg-6', 'col-md-6', 'col-sm-12', 'col-xs-12');
-            // Body
-            const myNodeBody = document.createElement('div');
-            myNodeBody.classList.add('offers__offerContainer');
-            // Titulo
-            const myNodeTitle = document.createElement('h5');
-            myNodeTitle.classList.add('offers__offerContainer--title');
-            myNodeTitle.textContent = info.name;
-            // Imagen
-            const myNodeImage = document.createElement('div');
-            const myImage = document.createElement('img');
-            myImage.classList.add('offers__offerContainer--imgPromo');
-            myImage.setAttribute('src', imagePath + info.image);
-            myImage.setAttribute('alt', info.name);
-            myNodeImage.appendChild(myImage);
-            const myDescription = document.createElement('p');
-            myDescription.classList.add('offers__offerContainer--text');
-            myDescription.textContent = info.description;
-            myNodeImage.appendChild(myDescription);
+            //Ruta donde estan las imagenes.
+            const imagePath = './assets/img/';
 
-            const myNodeRow = document.createElement('div');
-            myNodeRow.classList.add('row');
-            const myNodeColPrice = document.createElement('div');
-            myNodeColPrice.classList.add('col-lg-6', 'col-md-6', 'col-sm-12', 'col-xs-12');
+            /******************************************************
+             * Dibuja todas las ofertas                           *
+             ******************************************************/
+            function renderOffers() {
+                const DOMitems = document.querySelector('#items');
+                dataBase.forEach((info) => {
 
-            // Precio
-            const myNodePrice = document.createElement('p');
-            myNodePrice.classList.add('offers__offerContainer--price');
-            myNodePrice.textContent = `$ ${info.price}`;
-            myNodeColPrice.appendChild(myNodePrice);
-            myNodeRow.appendChild(myNodeColPrice);
-            
-            // Boton 
-            const myNodeColButton = document.createElement('div');
-            myNodeColButton.classList.add('col-lg-6', 'col-md-6', 'col-sm-12', 'col-xs-12');
-            const myNodeButton = document.createElement('button');
-            myNodeButton.setAttribute('offerId', info.id);
-            myNodeButton.classList.add('btn', 'btn-invert', 'btn-md', 'btnAddOffer');
-            myNodeButton.textContent = '+';
-            myNodeColButton.appendChild(myNodeButton);
-            myNodeRow.appendChild(myNodeColButton)
+                    // Estructura
+                    const myNode = document.createElement('div');
+                    myNode.classList.add('col-xl-4', 'col-lg-6', 'col-md-6', 'col-sm-12', 'col-xs-12');
+                    // Body
+                    const myNodeBody = document.createElement('div');
+                    myNodeBody.classList.add('offers__offerContainer');
+                    // Titulo
+                    const myNodeTitle = document.createElement('h5');
+                    myNodeTitle.classList.add('offers__offerContainer--title');
+                    myNodeTitle.textContent = info.name;
+                    // Imagen
+                    const myNodeImage = document.createElement('div');
+                    const myImage = document.createElement('img');
+                    myImage.classList.add('offers__offerContainer--imgPromo');
+                    myImage.setAttribute('src', imagePath + info.image);
+                    myImage.setAttribute('alt', info.name);
+                    myNodeImage.appendChild(myImage);
+                    const myDescription = document.createElement('p');
+                    myDescription.classList.add('offers__offerContainer--text');
+                    myDescription.textContent = info.description;
+                    myNodeImage.appendChild(myDescription);
 
-            // Insertamos
-            myNodeBody.appendChild(myNodeTitle);
-            myNodeBody.appendChild(myNodeImage);
-            myNodeBody.appendChild(myNodeRow);
-            myNode.appendChild(myNodeBody);
-            DOMitems.appendChild(myNode);
-        });
-    }
+                    const myNodeRow = document.createElement('div');
+                    myNodeRow.classList.add('row');
+                    const myNodeColPrice = document.createElement('div');
+                    myNodeColPrice.classList.add('col-lg-6', 'col-md-6', 'col-sm-12', 'col-xs-12');
 
-    /******************************************************
-     * Dibuja todas las ofertas guardadas en el carrito   *
-     ******************************************************/
-    function renderCart(offerId) {
-        // Vació todo el html.
-        DOMcart.textContent = '';
-        // Quitar los duplicados.
-        const cartWithoutDuplicates = [...new Set(cart)];
-        // Genero los Nodos a partir de carrito.
-        cartWithoutDuplicates.forEach((item) => {
-            // Obtengo el ítem que necesito de la variable base de datos.
-            const myItem = dataBase.filter((itemDB) => {
-                // ¿Coincide los id? Solo puede existir un caso.
-                return itemDB.id === parseInt(item);
-            });
-            // Cuenta el número de veces que se repite la oferta.
-            const numberUnitsItem = cart.reduce((total, itemId) => {
-                // ¿Coincide los id? Incremento el contador, en caso contrario no mantengo.
-                return itemId === item ? total += 1 : total;
-            }, 0);
-            // Creo el nodo del ítem del carrito.
-            const myNodo = document.createElement('li');
-            myNodo.classList.add('list-group-item', 'text-right', 'mx-2');
+                    // Precio
+                    const myNodePrice = document.createElement('p');
+                    myNodePrice.classList.add('offers__offerContainer--price');
+                    myNodePrice.textContent = `$ ${info.price}`;
+                    myNodeColPrice.appendChild(myNodePrice);
+                    myNodeRow.appendChild(myNodeColPrice);
 
-            myNodo.style = "background:#04305f; color:white; font-size:1.1rem";
+                    // Boton 
+                    const myNodeColButton = document.createElement('div');
+                    myNodeColButton.classList.add('col-lg-6', 'col-md-6', 'col-sm-12', 'col-xs-12');
+                    const myNodeButton = document.createElement('button');
+                    myNodeButton.setAttribute('offerId', info.id);
+                    myNodeButton.classList.add('btn', 'btn-invert', 'btn-md', 'btnAddOffer');
+                    myNodeButton.textContent = '+';
+                    myNodeColButton.appendChild(myNodeButton);
+                    myNodeRow.appendChild(myNodeColButton)
 
-            myNodo.textContent = `${numberUnitsItem} x ${myItem[0].name} - $ ${myItem[0].price}`;
-            // Boton de borrar.
-            const myBoton = document.createElement('button');
-            myBoton.classList.add('btn', 'btn-danger', 'mx-5');
-            myBoton.textContent = 'X';
-            myBoton.style.margin = '0.5rem';
-            myBoton.dataset.item = item;
-            $(myBoton).on('click', deleteItemCart);
-            // Uno los nodos.
-            myNodo.appendChild(myBoton);
-            // Oculto los elementos del carrito.
-            $(myNodo).hide();
-            // Identifico el elemento que se acaba de seleccionar.
-            if (item == offerId) {
-                // Muestro lentamente el elemento seleccionado.
-                $(myNodo).fadeIn(2000);
+                    // Insertamos
+                    myNodeBody.appendChild(myNodeTitle);
+                    myNodeBody.appendChild(myNodeImage);
+                    myNodeBody.appendChild(myNodeRow);
+                    myNode.appendChild(myNodeBody);
+                    DOMitems.appendChild(myNode);
+                });
             }
-            else {
-                // Sino es el elemento que se acaba de seleccionar, lo muestro.
-                $(myNodo).show();
+
+            /******************************************************
+             * Dibuja todas las ofertas guardadas en el carrito   *
+             ******************************************************/
+            function renderCart(offerId) {
+                // Vació todo el html.
+                DOMcart.textContent = '';
+                // Quitar los duplicados.
+                const cartWithoutDuplicates = [...new Set(cart)];
+                // Genero los Nodos a partir de carrito.
+                cartWithoutDuplicates.forEach((item) => {
+                    // Obtengo el ítem que necesito de la variable base de datos.
+                    const myItem = dataBase.filter((itemDB) => {
+                        // ¿Coincide los id? Solo puede existir un caso.
+                        return itemDB.id === parseInt(item);
+                    });
+                    // Cuenta el número de veces que se repite la oferta.
+                    const numberUnitsItem = cart.reduce((total, itemId) => {
+                        // ¿Coincide los id? Incremento el contador, en caso contrario no mantengo.
+                        return itemId === item ? total += 1 : total;
+                    }, 0);
+                    // Creo el nodo del ítem del carrito.
+                    const myNodo = document.createElement('li');
+                    myNodo.classList.add('list-group-item', 'text-right', 'mx-2');
+
+                    myNodo.style = "background:#04305f; color:white; font-size:1.1rem";
+
+                    myNodo.textContent = `${numberUnitsItem} x ${myItem[0].name} - $ ${myItem[0].price}`;
+                    // Boton de borrar.
+                    const myBoton = document.createElement('button');
+                    myBoton.classList.add('btn', 'btn-danger', 'mx-5');
+                    myBoton.textContent = 'X';
+                    myBoton.style.margin = '0.5rem';
+                    myBoton.dataset.item = item;
+                    $(myBoton).on('click', deleteItemCart);
+                    // Uno los nodos.
+                    myNodo.appendChild(myBoton);
+                    // Oculto los elementos del carrito.
+                    $(myNodo).hide();
+                    // Identifico el elemento que se acaba de seleccionar.
+                    if (item == offerId) {
+                        // Muestro lentamente el elemento seleccionado.
+                        $(myNodo).fadeIn(2000);
+                    }
+                    else {
+                        // Sino es el elemento que se acaba de seleccionar, lo muestro.
+                        $(myNodo).show();
+                    }
+                    DOMcart.appendChild(myNodo);
+
+                });
             }
-            DOMcart.appendChild(myNodo);
 
-        });
-    }
+            /**********************************************
+             * Evento para borrar un elemento del carrito *
+             **********************************************/
+            function deleteItemCart(event) {
 
-    /**********************************************
-     * Evento para borrar un elemento del carrito *
-     **********************************************/
-    function deleteItemCart(event) {
+                // Obtengo el ID de la oferta.
+                const id = event.target.dataset.item;
+                // Borro todas las ofertas.
+                cart = cart.filter((offerId) => {
+                    return offerId !== id;
+                });
+                // Actualizo el Local Storage.
+                localStorage.setItem("cart", JSON.stringify(cart));
 
-        // Obtengo el ID de la oferta.
-        const id = event.target.dataset.item;
-        // Borro todas las ofertas.
-        cart = cart.filter((offerId) => {
-            return offerId !== id;
-        });
-        // Actualizo el Local Storage.
-        localStorage.setItem("cart", JSON.stringify(cart));
+                // Vuelvo a renderizar el carrito.
+                renderCart();
+                // Calculo de nuevo el precio total.
+                calculateTotal();
+            }
 
-        // Vuelvo a renderizar el carrito.
-        renderCart();
-        // Calculo de nuevo el precio total.
-        calculateTotal();
-    }
+            /*********************************************************************
+             * Calcula el precio total teniendo en cuenta las ofertas repetidass *
+             *********************************************************************/
+            function calculateTotal() {
+                // Limpio el total anterior.
+                total = 0;
+                // Recorro el array del carrito.
+                cart.forEach((item) => {
+                    // De cada elemento obtengo su precio.
+                    const myItem = dataBase.filter((itemBD) => {
+                        return itemBD.id === parseInt(item);
+                    });
+                    total = total + myItem[0].price;
+                });
+                // Renderizo el precio en el HTML.
+                DOMtotal.textContent = total.toFixed(2);
+            }
 
-    /*********************************************************************
-     * Calcula el precio total teniendo en cuenta las ofertas repetidass *
-     *********************************************************************/
-    function calculateTotal() {
-        // Limpio el total anterior.
-        total = 0;
-        // Recorro el array del carrito.
-        cart.forEach((item) => {
-            // De cada elemento obtengo su precio.
-            const myItem = dataBase.filter((itemBD) => {
-                return itemBD.id === parseInt(item);
-            });
-            total = total + myItem[0].price;
-        });
-        // Renderizo el precio en el HTML.
-        DOMtotal.textContent = total.toFixed(2);
-    }
+            /********************
+             * Varia el carrito *
+             ********************/
+            function emptyCart() {
 
-    /********************
-     * Varia el carrito *
-     ********************/
-    function emptyCart() {
+                // Limpio las ofertas guardadas.
+                cart = [];
+                // Actualizo el Local Storage.
+                localStorage.setItem("cart", JSON.stringify(cart));
+                // Renderizo los cambios.
+                renderCart();
+                calculateTotal();
+            }
 
-        // Limpio las ofertas guardadas.
-        cart = [];
-        // Actualizo el Local Storage.
-        localStorage.setItem("cart", JSON.stringify(cart));
-        // Renderizo los cambios.
-        renderCart();
-        calculateTotal();
-    }
+            function buyNow() {
 
-    function buyNow() {
+                if (cart.length > 0) {
 
-        if (cart.length > 0) {
+                    alert("GRACIAS POR SU COMPRA!");
 
-            alert("GRACIAS POR SU COMPRA!");
+                    emptyCart();
 
-            emptyCart();
+                } else {
 
-        } else {
+                    alert("Debe elegir al menos una oferta");
 
-            alert("Debe elegir al menos una oferta");
+                }
+            }
 
-        }
-    }
+            // Inicializo el carrito, en caso de que el Local Storege tenga un carrito pre cargado, uso la información pre cargada.
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let total = 0;
 
-    // Inicializo el carrito, en caso de que el Local Storege tenga un carrito pre cargado, uso la información pre cargada.
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    let total = 0;
+            const DOMcart = document.querySelector('#cart');
+            const DOMtotal = document.querySelector('#total');
 
-    const DOMcart = document.querySelector('#cart');
-    const DOMtotal = document.querySelector('#total');
-
-    renderOffers()
-    // Calculo el total.
-    calculateTotal();
-    // Actualizo el carrito. 
-    renderCart();
-
-    /****************************************************************
-    * Vincular eventos a los distintos elementos según corresponda *
-    ****************************************************************/
-    let btnAddOffer = $('.btnAddOffer');
-
-    for (let i = 0; i < btnAddOffer.length; i++) {
-
-        /**********************************************************
-         * Evento para añadir una oferta al carrito de compras    *
-         **********************************************************/
-        $(btnAddOffer[i]).click(function (event) {
-
-            let offerId = $(event.target).attr('offerId');
-            // Ingreso oferta al carrito.
-            cart.push(offerId);
-
-            // Actualizo el Local Storage.
-            localStorage.setItem("cart", JSON.stringify(cart));
-
+            renderOffers()
             // Calculo el total.
             calculateTotal();
             // Actualizo el carrito. 
-            renderCart(offerId);
+            renderCart();
+
+            /****************************************************************
+            * Vincular eventos a los distintos elementos según corresponda *
+            ****************************************************************/
+            let btnAddOffer = $('.btnAddOffer');
+
+            for (let i = 0; i < btnAddOffer.length; i++) {
+
+                /**********************************************************
+                 * Evento para añadir una oferta al carrito de compras    *
+                 **********************************************************/
+                $(btnAddOffer[i]).click(function (event) {
+
+                    let offerId = $(event.target).attr('offerId');
+                    // Ingreso oferta al carrito.
+                    cart.push(offerId);
+
+                    // Actualizo el Local Storage.
+                    localStorage.setItem("cart", JSON.stringify(cart));
+
+                    // Calculo el total.
+                    calculateTotal();
+                    // Actualizo el carrito. 
+                    renderCart(offerId);
+                });
+            }
+
+            let btnEmpty = $('#btn-empty');
+            $(btnEmpty).on('click', emptyCart);
+
+            let btnBuy = $('#btn-buy');
+            $(btnBuy).on('click', buyNow);
+
+            /****************************************************************/
         });
-    }
-
-    let btnEmpty = $('#btn-empty');
-    $(btnEmpty).on('click', emptyCart);
-
-    let btnBuy = $('#btn-buy');
-    $(btnBuy).on('click', buyNow);
-
-    /****************************************************************/
 });
