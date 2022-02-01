@@ -5,7 +5,7 @@ $(document).ready(function () {
 
     //Esta función se utiliza en evento "onkeypress".
     //En los input de tipo text para que el usuario solo ingrese caracteres.
-    $("#txtName, #txtSurname").keypress(function (evt){
+    $("#txtName, #txtSurname").keypress(function (evt) {
 
         let ASCIICode = (evt.which) ? evt.which : evt.keyCode
         if (!((ASCIICode > 64 && ASCIICode < 91) || (ASCIICode > 96 && ASCIICode < 123) || ASCIICode == 8))
@@ -98,6 +98,12 @@ $(document).ready(function () {
             if (this.phone == "") {
                 alert("Debe ingresar un Telefono");
                 $('#txtPhone').focus();
+                return false;
+            }
+
+            if (this.phone.length < 10) {
+                alert("El telefono no debe tener menos de 10 numero");
+                $('#txtName').focus();
                 return false;
             }
 
