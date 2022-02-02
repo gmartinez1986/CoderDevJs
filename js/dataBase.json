@@ -63,5 +63,15 @@
             "image": "viajes-noroeste-aereo-desde-rosario.jpg",
             "description": "Viajes en avión al Noroeste Argentino. No te lo pierdas!"
         }
+    ],
+
+    "argentina": [
+        {
+            "id": 1,
+            "name": "Findes Largos y Feriados",
+            "price": 27300,
+            "image": "viajes-vacaciones-feriado-finde-largo.jpg",
+            "description": "Viajes para Feriados y Findes Largos. No te lo pierdas."
+        }
     ]
 }
