@@ -125,5 +125,28 @@
   ul.acordeon li:hover .contenido {
     width: 60%; /* 100 - ancho ul.acordeon li:hover h4 */
   }
+
+  .btn {
+    border-radius: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+  }
+
+ .btn-invert {
+    border: 1px solid black;
+    outline: 0;
+    color: white;
+    background-color: black;
+  }
+
+  .btn-invert:hover,
+  .btn-invert:focus {
+    border: 1px solid black;
+    color: black;
+    background-color: transparent;
+  }  
 }
 
