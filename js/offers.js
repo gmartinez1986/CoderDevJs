@@ -1,5 +1,14 @@
 $(document).ready(function () {
 
+    //Enumeración de los distintos conjuntos de paquetes.
+    const Packages = {
+        Offers: 1,
+        Argentina: 2,
+        Caribbean: 3,
+        Brasil: 4,
+        Europe: 5
+    }
+
     //Busco los paquetes turísticos en el archivo JSON.
     fetch('js/dataBase.json')
         .then(response => response.json())
@@ -7,7 +16,7 @@ $(document).ready(function () {
 
             //Tomo las ofertas del archivo JSON.
             //Filtro los paquetes a partir de idPackage = 1(uno) -> Promociones.
-            const dataBase = data.packages.filter(package => package.idPackage == 1);
+            const dataBase = data.packages.filter(package => package.idPackage == Packages.Offers);
 
             //Ruta donde estan las imagenes.
             const imagePath = './assets/img/';

@@ -1,5 +1,14 @@
 $(document).ready(function () {
 
+    //Enumeración de los distintos conjuntos de paquetes.
+    const Packages = {
+        Offers: 1,
+        Argentina: 2,
+        Caribbean: 3,
+        Brasil: 4,
+        Europe: 5
+    }
+
     //Busco los paquetes turísticos en el archivo JSON.
     fetch('../js/dataBase.json')
         .then(response => response.json())
@@ -14,22 +23,28 @@ $(document).ready(function () {
 
             switch (parseInt(params.idPackage)) {
                 //Filtro por los paquetes con idPackage = 2(dos) corresponden a destinos de Argentina.
-                case 2:
-                    packages = data.packages.filter(package => package.idPackage == 2);
+                case Packages.Argentina:
+                    packages = data.packages.filter(package => package.idPackage == Packages.Argentina);
                     $("#title1").html("Paquetes Locales");
                     $("#title2").html("Argentina");
                     break;
                 //Filtro por los paquetes con idPackage = 3(tres) corresponden a destinos del Caribe.
-                case 3:
-                    packages = data.packages.filter(package => package.idPackage == 3);
+                case Packages.Caribbean:
+                    packages = data.packages.filter(package => package.idPackage == Packages.Caribbean);
                     $("#title1").html("Paquetes Internacionales");
                     $("#title2").html("Caribe");
                     break;
                 //Filtro por los paquetes con idPackage = 4(cuatro) corresponden a destinos de Brasil.
-                case 4:
-                    packages = data.packages.filter(package => package.idPackage == 4);
+                case Packages.Brasil:
+                    packages = data.packages.filter(package => package.idPackage == Packages.Brasil);
                     $("#title1").html("Paquetes Internacionales");
                     $("#title2").html("Brasil");
+                    break;
+               //Filtro por los paquetes con idPackage = 5(cinco) corresponden a destinos de Europa.
+                case Packages.Europe:
+                    packages = data.packages.filter(package => package.idPackage == Packages.Europe);
+                    $("#title1").html("Paquetes Internacionales");
+                    $("#title2").html("Europa");
                     break;
                 //En caso que no se encuentre el conjunto de paquetes que corresponde,
                 //redirecciono a la pagina de error 404. 

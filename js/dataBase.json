@@ -242,6 +242,60 @@
             "image": "camboriu-min.jpg",
             "imageDescription": "camboriu", 
             "description": "Viví un destino intenso: playas, diversión y vida nocturna!"
+        },
+        {
+            "id": 28,
+            "idPackage": 5,
+            "name": "España, Portugal y Marruecos",
+            "price": 80000,
+            "image": "espana-min.jpg",
+            "imageDescription": "espana", 
+            "description": "Cultura, arquitecture e historia en un tour por España y Marruecos"
+        },
+        {
+            "id": 29,
+            "idPackage": 5,
+            "name": "Europa Clásica",
+            "price": 90000,
+            "image": "barcelona-espana-min.jpg",
+            "imageDescription": "barcelona-espana", 
+            "description": "Tour de 17 días ideal para tu primer viaje a Europa! Disfrutalo!"
+        },
+        {
+            "id": 30,
+            "idPackage": 5,
+            "name": "Europa Clásica + Londres",
+            "price": 100000,
+            "image": "londres-min.jpg",
+            "imageDescription": "londres", 
+            "description": "¡Tour de 24 días! Ideal para conocer Europa. Es increible, disfrutalo!"
+        },
+        {
+            "id": 31,
+            "idPackage": 5,
+            "name": "Paisajes de Europa",
+            "price": 100000,
+            "image": "viajes-viena-austria-centro-min.jpg",
+            "imageDescription": "viajes-viena-austria-centro", 
+            "description": "20 días realizando un tour por Europa Clásica. No querras perdertelo!"
+        },
+        {
+            "id": 32,
+            "idPackage": 5,
+            "name": "Europa para todos",
+            "price": 130000,
+            "image": "venecia-min.jpg",
+            "imageDescription": "venecia", 
+            "description": "17 días para conocer la historia europea. No te lo pierdas!"
+        },
+        {
+            "id": 33,
+            "idPackage": 5,
+            "name": "Sur de Italia + Grecia",
+            "price": 120000,
+            "image": "roma-italia-coliseo-min.jpg",
+            "imageDescription": "roma-italia-coliseo", 
+            "description": "Recorré durante 17 días lo mejor de Italia y Grecia! Disfrutalo!"
         }
     ]
 }
