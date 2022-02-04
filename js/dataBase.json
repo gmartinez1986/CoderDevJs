@@ -134,6 +134,15 @@
             "image": "CostaAtlantica-min.jpg",
             "imageDescription": "CostaAtlantica", 
             "description": "Viajá a la Costa: Pinamar, San Bernardo y Mar de Ajó."
+        },
+        {
+            "id": 16,
+            "idPackage": 3,
+            "name": "Playas de Cuba",
+            "price": 120000,
+            "image": "cuba-min.jpg",
+            "imageDescription": "cuba", 
+            "description": "Disfrutá el All Inclusive de Varadero, La Habana y Los Cayos!"
         }
     ]
 }

@@ -19,6 +19,12 @@ $(document).ready(function () {
                     $("#title1").html("Paquetes Locales");
                     $("#title2").html("Argentina");
                     break;
+                //Los paquetes con idPackage = 3(tres) corresponden a destinos del Caribe.
+                case 3:
+                    packages = data.packages.filter(package => package.idPackage == 3);
+                    $("#title1").html("Paquetes Internacionales");
+                    $("#title2").html("Caribe");
+                    break;
                 default:
 
                     break;
