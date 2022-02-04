@@ -6,7 +6,7 @@
             "name": "Findes Largos y Feriados",
             "price": 27300,
             "image": "viajes-vacaciones-feriado-finde-largo.jpg",
-            "imageDescription": "", 
+            "imageDescription": "viajesVacacionesFeriadoFindeLargo", 
             "description": "Viajes para Feriados y Findes Largos. No te lo pierdas."
         },
         {
@@ -15,7 +15,7 @@
             "name": "Noroeste Argentino",
             "price": 30000,
             "image": "noa-montana-7-colores.jpg",
-            "imageDescription": "", 
+            "imageDescription": "noaMontana7Colores", 
             "description": "Viví tradición y explora los bellos paisajes en el Noroeste."
         },
         {
@@ -24,7 +24,7 @@
             "name": "Merlo y Carlos Paz",
             "price": 20000,
             "image": "viajes-merlo-san-luis-sierras.jpg",
-            "imageDescription": "", 
+            "imageDescription": "viajesMerloSanLuisSierras", 
             "description": "Un bello y tranquilo recorrido por Neuquén. Para disfrutar en familia."
         },
         {
@@ -33,7 +33,7 @@
             "name": "San Juan y La Rioja",
             "price": 40000,
             "image": "campo-piedra-pomez-excursiones.jpg",
-            "imageDescription": "", 
+            "imageDescription": "campoPiedraPomezExcursiones", 
             "description": "Viajes que recorren paisajes enigmáticos y antiguos. Descubrilos!"
         },
         {
@@ -51,7 +51,7 @@
             "name": "Puerto Madryn",
             "price": 60000,
             "image": "madryn-navegacion-ballenas.jpg",
-            "imageDescription": "", 
+            "imageDescription": "madrynNavegacionBallenas", 
             "description": "Ciudad de Ballenas, Pingüinos, playas y mucha fauna marina!"
         },
         {
@@ -60,7 +60,7 @@
             "name": "El Calafate + Ushuaia",
             "price": 60000,
             "image": "ushuaia-viajes-excursiones-faro.jpg",
-            "imageDescription": "", 
+            "imageDescription": "ushuaiaViajesExcursionesFaro", 
             "description": "Volá en este hermoso viaje a Ushuaia y El Calafate. Descubri sus maravillas!"
         },
         {
@@ -69,7 +69,7 @@
             "name": "Costa Atlántica",
             "price": 80000,
             "image": "costa-atlantica-vacaciones.jpg",
-            "imageDescription": "", 
+            "imageDescription": "costaAtlanticaVacaciones", 
             "description": "Viajá a la Costa Atlántica: Pinamar, San Bernardo y Mar de Ajó."
         },
         {
@@ -78,7 +78,7 @@
             "name": "Noroeste en Avión",
             "price": 70000,
             "image": "viajes-noroeste-aereo-desde-rosario.jpg",
-            "imageDescription": "", 
+            "imageDescription": "viajesNoroesteAereoDesdeRosario", 
             "description": "Viajes en avión al Noroeste Argentino. No te lo pierdas!"
         },
         {
