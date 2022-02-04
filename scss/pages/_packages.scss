@@ -19,7 +19,10 @@
                  santorini-grecia, egipto-templo-philae, jardin-persa-israel-haifa,
                  cuba, dominicana-punta-cana, cartagena-colombia,
                  playa-carmen-hoteles-all-inclusive, taxco-mexico-viajes,
-                 habana-cuba {
+                 habana-cuba, viajesVacacionesFeriadoFindeLargo, noaMontana7Colores, 
+                 viajesMerloSanLuisSierras, campoPiedraPomezExcursiones, viajesBarilocheDesdeRosario,
+                 madrynNavegacionBallenas, ushuaiaViajesExcursionesFaro, costaAtlanticaVacaciones,
+                 viajesNoroesteAereoDesdeRosario {
 
     &--#{$city} { 
       content:url('../assets/img/#{$city}-min.jpg');

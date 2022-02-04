@@ -419,6 +419,33 @@
   .packages--habana-cuba {
     content: url("../assets/img/habana-cuba-min.jpg");
     background-size: 100% 250px; }
+  .packages--viajesVacacionesFeriadoFindeLargo {
+    content: url("../assets/img/viajesVacacionesFeriadoFindeLargo-min.jpg");
+    background-size: 100% 250px; }
+  .packages--noaMontana7Colores {
+    content: url("../assets/img/noaMontana7Colores-min.jpg");
+    background-size: 100% 250px; }
+  .packages--viajesMerloSanLuisSierras {
+    content: url("../assets/img/viajesMerloSanLuisSierras-min.jpg");
+    background-size: 100% 250px; }
+  .packages--campoPiedraPomezExcursiones {
+    content: url("../assets/img/campoPiedraPomezExcursiones-min.jpg");
+    background-size: 100% 250px; }
+  .packages--viajesBarilocheDesdeRosario {
+    content: url("../assets/img/viajesBarilocheDesdeRosario-min.jpg");
+    background-size: 100% 250px; }
+  .packages--madrynNavegacionBallenas {
+    content: url("../assets/img/madrynNavegacionBallenas-min.jpg");
+    background-size: 100% 250px; }
+  .packages--ushuaiaViajesExcursionesFaro {
+    content: url("../assets/img/ushuaiaViajesExcursionesFaro-min.jpg");
+    background-size: 100% 250px; }
+  .packages--costaAtlanticaVacaciones {
+    content: url("../assets/img/costaAtlanticaVacaciones-min.jpg");
+    background-size: 100% 250px; }
+  .packages--viajesNoroesteAereoDesdeRosario {
+    content: url("../assets/img/viajesNoroesteAereoDesdeRosario-min.jpg");
+    background-size: 100% 250px; }
   .packages .btn {
     border-radius: 0;
     font-family: 'Lato', sans-serif;

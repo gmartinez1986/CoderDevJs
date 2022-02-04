@@ -5,7 +5,7 @@
             "idPackage": 1,
             "name": "Findes Largos y Feriados",
             "price": 27300,
-            "image": "viajes-vacaciones-feriado-finde-largo.jpg",
+            "image": "viajesVacacionesFeriadoFindeLargo-min.jpg",
             "imageDescription": "viajesVacacionesFeriadoFindeLargo", 
             "description": "Viajes para Feriados y Findes Largos. No te lo pierdas."
         },
@@ -14,7 +14,7 @@
             "idPackage": 1,
             "name": "Noroeste Argentino",
             "price": 30000,
-            "image": "noa-montana-7-colores.jpg",
+            "image": "noaMontana7Colores-min.jpg",
             "imageDescription": "noaMontana7Colores", 
             "description": "Viví tradición y explora los bellos paisajes en el Noroeste."
         },
@@ -23,7 +23,7 @@
             "idPackage": 1,
             "name": "Merlo y Carlos Paz",
             "price": 20000,
-            "image": "viajes-merlo-san-luis-sierras.jpg",
+            "image": "viajesMerloSanLuisSierras-min.jpg",
             "imageDescription": "viajesMerloSanLuisSierras", 
             "description": "Un bello y tranquilo recorrido por Neuquén. Para disfrutar en familia."
         },
@@ -32,7 +32,7 @@
             "idPackage": 1,
             "name": "San Juan y La Rioja",
             "price": 40000,
-            "image": "campo-piedra-pomez-excursiones.jpg",
+            "image": "campoPiedraPomezExcursiones-min.jpg",
             "imageDescription": "campoPiedraPomezExcursiones", 
             "description": "Viajes que recorren paisajes enigmáticos y antiguos. Descubrilos!"
         },
@@ -41,8 +41,8 @@
             "idPackage": 1,
             "name": "Bariloche",
             "price": 50000,
-            "image": "viajes-bariloche-desde-rosario.jpg",
-            "imageDescription": "", 
+            "image": "viajesBarilocheDesdeRosario-min.jpg",
+            "imageDescription": "viajesBarilocheDesdeRosario", 
             "description": "Viajes a Bariloche, San Martín de los Andes y Villa la Angostura."
         },
         {
@@ -50,7 +50,7 @@
             "idPackage": 1,
             "name": "Puerto Madryn",
             "price": 60000,
-            "image": "madryn-navegacion-ballenas.jpg",
+            "image": "madrynNavegacionBallenas-min.jpg",
             "imageDescription": "madrynNavegacionBallenas", 
             "description": "Ciudad de Ballenas, Pingüinos, playas y mucha fauna marina!"
         },
@@ -59,7 +59,7 @@
             "idPackage": 1,
             "name": "El Calafate + Ushuaia",
             "price": 60000,
-            "image": "ushuaia-viajes-excursiones-faro.jpg",
+            "image": "ushuaiaViajesExcursionesFaro-min.jpg",
             "imageDescription": "ushuaiaViajesExcursionesFaro", 
             "description": "Volá en este hermoso viaje a Ushuaia y El Calafate. Descubri sus maravillas!"
         },
@@ -68,7 +68,7 @@
             "idPackage": 1,
             "name": "Costa Atlántica",
             "price": 80000,
-            "image": "costa-atlantica-vacaciones.jpg",
+            "image": "costaAtlanticaVacaciones-min.jpg",
             "imageDescription": "costaAtlanticaVacaciones", 
             "description": "Viajá a la Costa Atlántica: Pinamar, San Bernardo y Mar de Ajó."
         },
@@ -77,7 +77,7 @@
             "idPackage": 1,
             "name": "Noroeste en Avión",
             "price": 70000,
-            "image": "viajes-noroeste-aereo-desde-rosario.jpg",
+            "image": "viajesNoroesteAereoDesdeRosario-min.jpg",
             "imageDescription": "viajesNoroesteAereoDesdeRosario", 
             "description": "Viajes en avión al Noroeste Argentino. No te lo pierdas!"
         },
