@@ -6,7 +6,8 @@ $(document).ready(function () {
         .then(function (data) {
 
             //Tomo las ofertas del archivo JSON.
-            const dataBase = data.offers;
+            //Filtro los paquetes a partir de idPackage = 1(uno) -> Promociones.
+            const dataBase = data.packages.filter(package => package.idPackage == 1);
 
             //Ruta donde estan las imagenes.
             const imagePath = './assets/img/';

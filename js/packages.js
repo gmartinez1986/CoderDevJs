@@ -5,16 +5,17 @@ $(document).ready(function () {
         .then(response => response.json())
         .then(function (data) {
 
-            //Busco el IdDestino por query string.
+            //Busco el idPackage por query string.
             const params = new Proxy(new URLSearchParams(window.location.search), {
                 get: (searchParams, prop) => searchParams.get(prop),
             });
 
-            let destination = [];
+            let packages = [];
 
-            switch (parseInt(params.IdDestination)) {
-                case 1:
-                    destination = data.argentina;
+            switch (parseInt(params.idPackage)) {
+                //Los paquetes con idPackage = 2(dos) corresponden a destinos de Argentina.
+                case 2:
+                    packages = data.packages.filter(package => package.idPackage == 2);
                     $("#title1").html("Paquetes Locales");
                     $("#title2").html("Argentina");
                     break;
@@ -28,7 +29,7 @@ $(document).ready(function () {
              ******************************************************/
             function renderDestination() {
                 const DOMitems = document.querySelector('#items');
-                destination.forEach((info) => {
+                packages.forEach((info) => {
 
                     // Estructura
                     const myNode = document.createElement('div');
