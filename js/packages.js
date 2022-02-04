@@ -13,17 +13,23 @@ $(document).ready(function () {
             let packages = [];
 
             switch (parseInt(params.idPackage)) {
-                //Los paquetes con idPackage = 2(dos) corresponden a destinos de Argentina.
+                //Filtro por los paquetes con idPackage = 2(dos) corresponden a destinos de Argentina.
                 case 2:
                     packages = data.packages.filter(package => package.idPackage == 2);
                     $("#title1").html("Paquetes Locales");
                     $("#title2").html("Argentina");
                     break;
-                //Los paquetes con idPackage = 3(tres) corresponden a destinos del Caribe.
+                //Filtro por los paquetes con idPackage = 3(tres) corresponden a destinos del Caribe.
                 case 3:
                     packages = data.packages.filter(package => package.idPackage == 3);
                     $("#title1").html("Paquetes Internacionales");
                     $("#title2").html("Caribe");
+                    break;
+                //Filtro por los paquetes con idPackage = 4(cuatro) corresponden a destinos de Brasil.
+                case 4:
+                    packages = data.packages.filter(package => package.idPackage == 4);
+                    $("#title1").html("Paquetes Internacionales");
+                    $("#title2").html("Brasil");
                     break;
                 //En caso que no se encuentre el conjunto de paquetes que corresponde,
                 //redirecciono a la pagina de error 404. 

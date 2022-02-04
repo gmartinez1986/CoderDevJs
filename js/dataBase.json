@@ -188,6 +188,60 @@
             "image": "habana-cuba-min.jpg",
             "imageDescription": "habana-cuba", 
             "description": "Un tour para encontrar Historia, Cultura y playas de primer nivel."
+        },
+        {
+            "id": 22,
+            "idPackage": 4,
+            "name": "Rio de Janeiro",
+            "price": 40000,
+            "image": "janeiro-min.jpg",
+            "imageDescription": "janeiro", 
+            "description": "Recorré esta famosa ciudad, única en el mundo y disfruta de sus paisajes"
+        },
+        {
+            "id": 23,
+            "idPackage": 4,
+            "name": "Búzios",
+            "price": 45000,
+            "image": "buzios-min.jpg",
+            "imageDescription": "buzios", 
+            "description": "Un pintorezco pueblo pesquero con bellas playas y vida nocturna."
+        },
+        {
+            "id": 24,
+            "idPackage": 4,
+            "name": "Salvador de Bahía e Imbassai",
+            "price": 35000,
+            "image": "salvador-de-bahia-min.jpg",
+            "imageDescription": "salvador-de-bahia", 
+            "description": "Conocé y disfruta Bahía: tradición, cultura y playas paradisíacas!"
+        },
+        {
+            "id": 25,
+            "idPackage": 4,
+            "name": "Natal y Pipa",
+            "price": 35000,
+            "image": "salvador-de-bahia-min.jpg",
+            "imageDescription": "natal-pipa", 
+            "description": "Visitá Natal y Pipa, hermosas playas del Nordeste de Brasil."
+        },
+        {
+            "id": 26,
+            "idPackage": 4,
+            "name": "Recife y Porto de Galinhas",
+            "price": 30000,
+            "image": "porto-galinhas-min.jpg",
+            "imageDescription": "porto-galinhas", 
+            "description": "Descubrí ésta región y sus formaciones coralinas! No te lo pierdas!"
+        },
+        {
+            "id": 27,
+            "idPackage": 4,
+            "name": "Camboriú",
+            "price": 25000,
+            "image": "camboriu-min.jpg",
+            "imageDescription": "camboriu", 
+            "description": "Viví un destino intenso: playas, diversión y vida nocturna!"
         }
     ]
 }
