@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    //Busco las ofertas en el archivo JSON.
+    //Busco los paquetes turísticos en el archivo JSON.
     fetch('js/dataBase.json')
         .then(response => response.json())
         .then(function (data) {

@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    //Busco los destinos en el archivo JSON.
+    //Busco los paquetes turísticos en el archivo JSON.
     fetch('../js/dataBase.json')
         .then(response => response.json())
         .then(function (data) {
@@ -25,8 +25,10 @@ $(document).ready(function () {
                     $("#title1").html("Paquetes Internacionales");
                     $("#title2").html("Caribe");
                     break;
+                //En caso que no se encuentre el conjunto de paquetes que corresponde,
+                //redirecciono a la pagina de error 404. 
                 default:
-
+                    location.replace("./404.html")
                     break;
             }
 
@@ -66,7 +68,6 @@ $(document).ready(function () {
                     myCardPriceBold.textContent = `Precio: $${info.price}`;
                     myCardPrice.appendChild(myCardPriceBold);
                     myCardBody.appendChild(myCardPrice);
-
 
                     // Boton 
                     const myNodeColButton = document.createElement('div');
