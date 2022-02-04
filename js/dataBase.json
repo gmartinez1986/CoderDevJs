@@ -143,6 +143,51 @@
             "image": "cuba-min.jpg",
             "imageDescription": "cuba", 
             "description": "Disfrutá el All Inclusive de Varadero, La Habana y Los Cayos!"
+        },
+        {
+            "id": 17,
+            "idPackage": 3,
+            "name": "República Dominicana",
+            "price": 80000,
+            "image": "vacaciones-caribe-desde-rosario.jpg",
+            "imageDescription": "dominicana-punta-cana", 
+            "description": "Descubrí por qué Punta Cana y La Romana son paraísos de lujo."
+        },
+        {
+            "id": 18,
+            "idPackage": 3,
+            "name": "Caribe Colombiano",
+            "price": 75000,
+            "image": "cartagena-colombia-min.jpg",
+            "imageDescription": "cartagena-colombia", 
+            "description": "Encontrá y explora playas, cultura y diversión en Colombia!"
+        },
+        {
+            "id": 19,
+            "idPackage": 3,
+            "name": "Cancún y Costa Mujeres",
+            "price": 65000,
+            "image": "playa-carmen-hoteles-all-inclusive-min.jpg",
+            "imageDescription": "playa-carmen-hoteles-all-inclusive", 
+            "description": "Encontrá calidad, aventura, confort y diversión en la Riviera Maya!"
+        },
+        {
+            "id": 20,
+            "idPackage": 3,
+            "name": "Joyas Mexicanas",
+            "price": 55000,
+            "image": "taxco-mexico-viajes-min.jpg",
+            "imageDescription": "taxco-mexico-viajes", 
+            "description": "Recorré México en grupo, conoce y disfrutá sus playas y cultura!"
+        },
+        {
+            "id": 21,
+            "idPackage": 3,
+            "name": "Cuba Entre Amigos",
+            "price": 50000,
+            "image": "habana-cuba-min.jpg",
+            "imageDescription": "habana-cuba", 
+            "description": "Un tour para encontrar Historia, Cultura y playas de primer nivel."
         }
     ]
 }

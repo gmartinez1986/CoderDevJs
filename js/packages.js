@@ -32,9 +32,9 @@ $(document).ready(function () {
                     break;
             }
 
-            /******************************************************
-             * Dibuja los destinos                                *
-             ******************************************************/
+            /*********************************************************
+             * Dibuja los destinos                                
+             *********************************************************/
             function renderDestination() {
                 const DOMitems = document.querySelector('#items');
                 packages.forEach((info) => {
@@ -88,7 +88,5 @@ $(document).ready(function () {
             }
 
             renderDestination();
-
         });
-
 });
