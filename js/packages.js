@@ -6,7 +6,8 @@ $(document).ready(function () {
         Argentina: 2,
         Caribbean: 3,
         Brasil: 4,
-        Europe: 5
+        Europe: 5,
+        Exotic: 6
     }
 
     //Busco los paquetes turísticos en el archivo JSON.
@@ -40,11 +41,17 @@ $(document).ready(function () {
                     $("#title1").html("Paquetes Internacionales");
                     $("#title2").html("Brasil");
                     break;
-               //Filtro por los paquetes con idPackage = 5(cinco) corresponden a destinos de Europa.
+                //Filtro por los paquetes con idPackage = 5(cinco) corresponden a destinos de Europa.
                 case Packages.Europe:
                     packages = data.packages.filter(package => package.idPackage == Packages.Europe);
                     $("#title1").html("Paquetes Internacionales");
                     $("#title2").html("Europa");
+                    break;
+                //Filtro por los paquetes con idPackage = 6(seis) corresponden a destinos Exóticos.
+                case Packages.Exotic:
+                    packages = data.packages.filter(package => package.idPackage == Packages.Exotic);
+                    $("#title1").html("Paquetes Internacionales");
+                    $("#title2").html("Exótico");
                     break;
                 //En caso que no se encuentre el conjunto de paquetes que corresponde,
                 //redirecciono a la pagina de error 404. 

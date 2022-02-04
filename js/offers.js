@@ -6,7 +6,8 @@ $(document).ready(function () {
         Argentina: 2,
         Caribbean: 3,
         Brasil: 4,
-        Europe: 5
+        Europe: 5,
+        Exotic: 6
     }
 
     //Busco los paquetes turísticos en el archivo JSON.

@@ -296,6 +296,42 @@
             "image": "roma-italia-coliseo-min.jpg",
             "imageDescription": "roma-italia-coliseo", 
             "description": "Recorré durante 17 días lo mejor de Italia y Grecia! Disfrutalo!"
+        },
+        {
+            "id": 33,
+            "idPackage": 6,
+            "name": "Turquía Grupal",
+            "price": 80000,
+            "image": "viajes-turquia-min.jpg",
+            "imageDescription": "viajes-turquia", 
+            "description": "Recorré Estambul y Turquia!"
+        },
+        {
+            "id": 34,
+            "idPackage": 6,
+            "name": "Grecia y Turquia",
+            "price": 90000,
+            "image": "santorini-grecia-min.jpg",
+            "imageDescription": "santorini-grecia", 
+            "description": "Recorré Grecia y Turquia!"
+        },
+        {
+            "id": 35,
+            "idPackage": 6,
+            "name": "Egipto con Playa",
+            "price": 95000,
+            "image": "egipto-templo-philae-min.jpg",
+            "imageDescription": "egipto-templo-philae", 
+            "description": "Navegá por el Nilo, y conocé El Cairo!"
+        },
+        {
+            "id": 36,
+            "idPackage": 6,
+            "name": "Joyas del medio Oriente",
+            "price": 100000,
+            "image": "jardin-persa-israel-haifa-min.jpg",
+            "imageDescription": "jardin-persa-israel-haifa", 
+            "description": "Aventurate por medio oriente!"
         }
     ]
 }
