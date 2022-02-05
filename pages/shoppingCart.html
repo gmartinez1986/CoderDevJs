@@ -60,52 +60,25 @@
 
 <!--Sección Principal-->
 <main class="main">
-    <h2 class="titles--subtitlesH2" id="title1"></h2>
+    <h2 class="titles--subtitlesH2" id="title1">Su selección</h2>
     <section class="main--grid">
-        <div class="packages container">
-            <h3 class="titles--subtitlesH3" id="title2"></h3>
+        <div class="container">
+            <div class="row" style="justify-content: center; min-height: 60vh;position: sticky;">
+                <h3 class="titles--subtitlesH3" id="title2">Carrito</h3>
 
-            <div class="row" style="margin: 3%;">
-                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                    <ul class="acordeon">
-                        <li style="background: #3b5998;">
-                            <h4><a href="https://www.facebook.com/AgenciaDeTurismo/" target="_blank"><span
-                                        class="fab fa-facebook-square"></span></a></h4>
-                            <div class="contenido">
-                                <a href="https://www.facebook.com/AgenciaDeTurismo/" target="_blank">/Agencia</a>
-                            </div>
-                        </li>
+                <!-- Elementos del carrito -->
 
-                        <li style="background: #FD1D1D;">
-                            <h4><a href="https://www.instagram.com/AgenciaDeTurismo" target="_blank"> <span
-                                        class="fab fa-instagram"></span> </a> </h4>
-                            <div class="contenido">
-                                <a href="https://www.instagram.com/AgenciaDeTurismo/" target="_blank">/Agencia</a>
-                            </div>
-                        </li>
-
-                        <li style="background: #4989f4;">
-                            <h4> <a href="https://www.google.com/maps?cid=11111111111111" target="_blank">
-                                    <img src="../assets/img/gmaps.png" alt="Agencia de Turismo en Google Maps"
-                                        title="Agencia de Turismo en Google Maps">
-                                </a> </h4>
-                            <div class="contenido">
-                                <a href="https://www.google.com/maps?cid=11111111111111" target="_blank">/Agencia</a>
-                            </div>
-                        </li>
-
-                    </ul>
+                <div class="col-6">
+                    <ul id="cart" class="list-group"></ul>
                 </div>
-
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#myModal" class="btn btn-default btn-md">
-                        <span>Consultá un asesor</span>
-                    </a>
+                <!-- Precio total -->
+                <p class="text-center" style="color: white; font-size:1.2rem;">Total: <span
+                        id="total">0.00</span>&dollar;;
+                </p>
+                <div class="text-center">
+                    <button id="btn-empty" class="btn btn-danger" style="font-size:1.1rem;">Vaciar</button>
+                    <button id="btn-buy" class="btn btn-success" style="font-size:1.1rem;">Comprar</button>
                 </div>
-            </div>
-
-            <div class="row" id="items">
-
             </div>
         </div>
     </section>
@@ -242,6 +215,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
     crossorigin="anonymous"></script>
-<script src="../js/packages.js"></script>
+<script src="../js/shoppingCart.js"></script>
 
 </html>
