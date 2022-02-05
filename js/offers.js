@@ -59,7 +59,7 @@ $(document).ready(function () {
                     // Precio
                     const myNodePrice = document.createElement('p');
                     myNodePrice.classList.add('offers__offerContainer--price');
-                    myNodePrice.textContent = `$ ${info.price}`;
+                    myNodePrice.textContent = `$ ${info.price.toLocaleString('es-es')}`;
                     myNodeColPrice.appendChild(myNodePrice);
                     myNodeRow.appendChild(myNodeColPrice);
 

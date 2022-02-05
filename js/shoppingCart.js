@@ -34,7 +34,7 @@ $(document).ready(function () {
                     const myNodo = document.createElement('li');
                     myNodo.classList.add('list-group-item', 'text-right', 'mx-2');
                     myNodo.style = "background:#04305f; color:white; font-size:1.1rem";
-                    myNodo.textContent = `${numberUnitsItem} x ${myItem[0].name} - $ ${myItem[0].price}`;
+                    myNodo.textContent = `${numberUnitsItem} x ${myItem[0].name} - $ ${myItem[0].price.toLocaleString('es-es')}`;
 
                     // Boton de borrar.
                     const myBoton = document.createElement('button');
@@ -83,7 +83,7 @@ $(document).ready(function () {
                     total = total + myItem[0].price;
                 });
                 // Renderizo el precio en el HTML.
-                DOMtotal.textContent = total.toFixed(2);
+                DOMtotal.textContent = total.toLocaleString('es-es');
             }
 
             /********************

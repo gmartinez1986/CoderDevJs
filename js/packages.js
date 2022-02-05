@@ -93,7 +93,7 @@ $(document).ready(function () {
 
                     const myCardPrice = document.createElement('p');
                     const myCardPriceBold = document.createElement('b');
-                    myCardPriceBold.textContent = `Precio: $${info.price}`;
+                    myCardPriceBold.textContent = `Precio: $${info.price.toLocaleString('es-es')}`;
                     myCardPrice.appendChild(myCardPriceBold);
                     myCardBody.appendChild(myCardPrice);
 
