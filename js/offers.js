@@ -80,6 +80,16 @@ $(document).ready(function () {
                     myNode.appendChild(myNodeBody);
                     DOMitems.appendChild(myNode);
                 });
+
+                renderCount();
+            }
+
+            function renderCount(){
+
+                if(cart.length > 0){
+                    $('#count').addClass("badge on");
+                    $('#count').html(cart.length);
+                }
             }
 
             // Inicializo el carrito, en caso de que el Local Storege tenga un carrito pre cargado, uso la información pre cargada.
@@ -105,6 +115,8 @@ $(document).ready(function () {
 
                     // Actualizo el Local Storage.
                     localStorage.setItem("cart", JSON.stringify(cart));
+
+                    renderCount();
 
                 });
             }

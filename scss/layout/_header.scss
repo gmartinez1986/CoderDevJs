@@ -68,4 +68,31 @@ $color-header: rgb(4,48,95);
     .nav-link:hover{
         color: #337ab7 !important;
     }
+
+    span.badge{
+        display:inline-block;
+        padding: 1px 5px 1px 5px;
+        text-align:center;
+        color:#fff !important;
+        font-size:10px;
+        line-height:13px;
+        -moz-border-radius:3px;
+        border-radius:3px;
+        -o-border-radius:3px;
+        -khtml-border-radius:3px;
+    }
+
+    li a{ position:relative; display:inline-block;}
+
+    a span.badge{
+        position:absolute;
+        top:-5px;
+        right:0px;
+        margin:0;
+    }
+
+    span.badge.on{
+        background-color:#f60;
+        color: #ffffff !important;
+    }
 }
