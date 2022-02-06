@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+    //Actualizo el contador con el numero de paquetes turísticos seleccionados.
     function renderCount(){
 
         if(cart.length > 0){

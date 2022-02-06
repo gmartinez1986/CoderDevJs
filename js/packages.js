@@ -117,6 +117,7 @@ $(document).ready(function () {
                 renderCount();
             }
 
+            //Actualizo el contador con el numero de paquetes turísticos seleccionados por el usuario.
             function renderCount() {
 
                 if (cart.length > 0) {
