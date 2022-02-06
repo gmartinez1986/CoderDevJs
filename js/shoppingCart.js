@@ -47,6 +47,8 @@ $(document).ready(function () {
                     myNodo.appendChild(myBoton);
                     DOMcart.appendChild(myNodo);
                 });
+
+                renderCount()
             }
 
             /**********************************************
@@ -66,6 +68,7 @@ $(document).ready(function () {
                 renderCart();
                 // Calculo de nuevo el precio total.
                 calculateTotal();
+                renderCount();
             }
 
             /*********************************************************************
@@ -98,6 +101,18 @@ $(document).ready(function () {
                 // Renderizo los cambios.
                 renderCart();
                 calculateTotal();
+                renderCount();
+            }
+
+            function renderCount() {
+
+                if (cart.length > 0) {
+                    $('#count').addClass("badge on");     
+                    $('#count').html(cart.length);
+                }else{
+                    $('#count').removeClass();
+                    $('#count').html(""); 
+                }
             }
 
             function buyNow() {
